@@ -16,7 +16,9 @@ body {
   font-size: 18px;
   color: hsl(3, 3%, 35%);
 }
-
+.title {
+  font-family: Anton, 'Old Standard TT', serif;
+}
 .nav .nav-link {
   color: white !important
 }
@@ -26,7 +28,7 @@ body {
   font-family: 'Anton', sans-serif;
 }
 
-.ampm {
+.ampm, p, div, input[placeholder], select option, select[selected] {
   font-family: 'Old Standard TT', serif;
 }
 

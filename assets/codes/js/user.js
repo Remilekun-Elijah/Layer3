@@ -50,60 +50,56 @@ class Form {
     this.office.addEventListener('keyup', e => check(e, e.target.value.length > 3));
     this.street.addEventListener('change', e => console.log(e.target.value, e.returnValue));
     const that = this;
-    setInterval(function () {
+    let int = setInterval(function () {
       // let e = { e: that._street }
       if (that.name.parentElement.lastElementChild.firstElementChild.classList.contains('fa-check') && that.number.parentElement.lastElementChild.firstElementChild.classList.contains('fa-check') && that.office.parentElement.lastElementChild.firstElementChild.classList.contains('fa-check') && that.street.value !== that.street[0].value) {
 
         that.form.submit.disabled = false;
         that.form.submit.setAttribute("data-target", "#signingUp")
         console.log('Form is all setted up and ready to submit');
+
       } else that.form.submit.disabled = true;
     }, 1000);
-    return { submit: this.form.addEventListener('submit', e => this.submit(e)) }
+    return { submit: this.form.addEventListener('submit', e => { this.submit(e); clearInterval(int, 100) }) }
   }
 
   submit(e) {
     console.log('Submitted successfully')
     e.preventDefault();
-    ;
-    // registering modal text
-    setTimeout(() => {
-      // $('#text').fadeToggle(1);
-      // $('body').removeClass('modal-open')
-    }, 1500);
+
     // success register modal text
-
-
     setTimeout(() => {
-      $('#text').fadeToggle(1999);
-      $('.parent').html( //html
-        `
+      $('#text').fadeToggle(500, () => {
+        $('.parent').html( //html
+          `
 				<p class='animated slideInTop'><i class="fa fa-smile-o text-success fa-3x "></i></p>
 				<h3 class="text-success">Successfully Registered! </h3>
 			`);
+      });
+      // remove a padding-right: 15px added by registered modal
+      $('body').css('padding-right', '0px');
+      $('.card-form').fadeToggle(500, () => {
+        // toggle the customers statement at the header
+        $('.img1').removeClass('d-none');
+        $('.img1').addClass('d-block');
+        $('.img1').fadeTo(500, 1);
+        //  remove the register form after fading allowing customers review card to make use of the ROW div(class)
+        $('#regform').addClass('d-none');
+        // Work Here 
+        transition(); // user.js:91 Uncaught ReferenceError: transition is not defined
+      })
     }, 2000);
-    // remove register modal nd form
-    // setTimeout(() => {
-    //Work here: REmove Modal
-    $('#signingUp').fadeToggle(250, () => {
-      // $('body').removeClass('modal-open')
-      $('.card-form').fadeToggle(2010)
-
-    })
-
-    // }, 4000);
-    //   const details = {
-    //     name: $name.val(),
-    //     email: $email.val(),
-    //     number: $number.val()
-    //   };
-    //   localStorage.setItem('user', JSON.stringify(details));
+    // remove register modal
+    setTimeout(() => {
+      // remove the registered message plus the dark overlay
+      $('.show').remove();
+      // make scroll available after removing modal overlay
+      $('body').removeClass('modal-open');
+    }, 4000)
   }
 
 }
 const signup = new Form('#signUp');
-// console.log(signup);
-
 signup.verify().submit()
 
 
@@ -129,11 +125,11 @@ document.addEventListener('DOMContentLoaded', function () {
     setInterval(() => {
       i++;
       // console.log(i);
-      // const imgP = document.querySelector('.img1');
+      const imgP = document.querySelector('.img1');
       if (window.innerWidth < 992) {
-        // imgP.parentElement.classList.add('mt-5');
+        imgP.parentElement.classList.add('mt-5 mb-5');
       } else {
-        // imgP.parentElement.classList.remove('mt-5');
+        imgP.parentElement.classList.remove('mt-5');
       }
       imageChanger(i);
     }, 4000);
@@ -199,105 +195,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     transition();
   }
-
-  function register() {
-    // $('#signUpSubmit').on('click', signUp);
-  }
-  register();
-
-
-
-
-  // form verification
-  function verifyForm(name, email, number, submit, callback) {
-
-    function inputChecker(element, condition, el, text, callback) {
-      $(el).css('text-shadow', '-1px -1px 7px #aaa');
-      $(el).css('box-shadow', '10px 4px 20px 0px rgba(0, 0, 0, 0.2)');
-
-      if (condition) {
-        setTimeout(() => {
-          element.css('border', '0px solid transparent');
-          $(el).text('');
-
-        }, 2000);
-
-      } else if (!condition) {
-        //  alert(email.val());
-        element.css('border', '0px solid transparent');
-        $(el).text('Checking...');
-        $(el).css('color', 'white');
-        setTimeout(() => {
-          element.css('border', '1px solid #de2525');
-          // submit.prop('disabled', true);
-          $(el).text(text);
-          $(el).css('color', 'white');
-
-
-        }, 2000);
-
-      }
-
-      if (name.val() && email.val().includes('@') && email.val().includes('.') && number.val() && number.val().length === 11 || number.val().length === 14) {
-
-        submit.prop('disabled', false);
-
-        callback;
-      } else {
-        submit.prop('disabled', true);
-
-      }
-    }
-
-    name.on('keyup', () => {
-      inputChecker(name, name.val(), '#infoPanel #NameMsg', 'Please fill out this field');
-
-    });;
-
-    email.on('keyup', () => {
-
-      inputChecker(email, email.val().includes('@') && email.val().includes('.'), '#infoPanel #EmailMsg', 'Please use a valid email');
-    });
-    let v, b;
-    number.on('keyup', () => {
-      if (!isNaN(Number(number.val()))) {
-
-        inputChecker(number, number.val() && number.val().length === 11 || number.val().length == 14, '#infoPanel #NumberMsg', `Number is incorrect`, function () {
-          if (number.val().length == 11) {
-            b = number.val();
-            console.log('b: ' + b);
-          } else if (b == undefined) {
-            b = '000000000';
-          }
-
-          if (number.val()[0] == '2' && number.val()[1] == '3' && number.val()[2] == '4' && number.val().length == 13) {
-            number.val(`+${number.val()}`);
-            alert(number.val());
-
-          }
-          if (number.val()[0] !== '+' && number.val()[0] !== '2' && number.val()[1] !== '3' && number.val()[2] !== '4' && number.val().length == 14) {
-
-            number.val('+23' + b);
-            number.val(number.val().replace(`${number.val()[3]}`, '4'));
-
-            v = number.val();
-          }
-
-
-          if (number.val().length > 14) {
-            number.val(v);
-            $('#infoPanel #NumberMsg').text(`Number must be less than ${number.val().length}`);
-          }
-
-        });
-      } else {
-        $('#infoPanel #NumberMsg').text(`This field must contain only numbers`);
-      }
-    });
-
-    if ($('#updateSubmit')) submit.on('click', callback);
-  }
-
 
 
   // settings
@@ -416,8 +313,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   document.addEventListener('click', e => {
-    if (e.target != document.querySelector('nav #user') && e.target != document.querySelector('nav .container') && e.target != document.querySelector('.navbar')) {
-      // $('.navbar .collapse').collapse('hide');
+    if (e.target != document.querySelector('.nav') && e.target != document.querySelector('nav .container') && e.target != document.querySelector('.navbar')) {
+      $('.navbar .collapse').collapse('hide');
+      console.log(1++)
     }
   });
 });
