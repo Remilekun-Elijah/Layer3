@@ -2,7 +2,7 @@ window.onload = function () {
     console.clear();
     var cart = document.querySelector("#cart");
     const buy = document.querySelectorAll("#buy");
-
+cart.textContent = 0;
     buy.forEach( (card) => {
         card.addEventListener("click", addToCart);
 
@@ -13,8 +13,8 @@ window.onload = function () {
         // cart.textContent = add();
         
 
-        if( typeof cart.textContent == Number){
-            cart.textContent = (cart.textContent+1);
+        if( cart.textContent ){
+            cart.textContent = (Number(cart.textContent)+1);
             console.log(cart.textContent +1);
         }
         else{ 
