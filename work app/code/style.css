@@ -1,0 +1,209 @@
+body{
+   
+    background-attachment: fixed;
+    background-size: cover;
+    background: repeating-linear-gradient(90deg, #088ed6,  #333) no-repeat !important;
+    overflow-x: hidden;
+}
+.animate-it{
+    animation-name: color;
+    animation-iteration-count: infinite;
+    animation-duration: 8s;
+    font-size: 20px;
+    transform: scale(2);
+    position: relative;
+    color: beige;
+    top: 1em;
+    /* overflow-x: hidden !important; */
+}
+@keyframes color{
+    0%{
+        text-decoration-line: line-through;
+        text-decoration-color: #fff;
+        text-decoration-style: wavy;
+        left: 0;
+        color: #fff;
+    }
+    75%{
+        text-decoration-line: line-through;
+        text-decoration-color: #aaa;
+        text-decoration-style: wavy;
+        left: 100%;
+        color: #aaa;
+    }
+    80%{
+        text-decoration-style: wavy;
+        text-decoration-color: transparent;   
+
+    }
+    
+    100%
+    {
+        text-decoration-line: line-through;
+        text-decoration-color: #fff;
+        text-decoration-style: wavy;
+        /* opacity: 0; */
+
+    }
+}
+#home{
+    background-color: #333 !important;
+    background: url(../images/Owerri-mall-store.jpg) no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 700px;
+    background-size: cover;
+    color: #fff !important;
+}
+.home-inner{
+    padding-top: 140px;
+
+}
+.collapse ul li:hover a[href="law-school.html"]:hover{
+    transition: all .4s;
+    border-left: 1px solid #088ed6;
+    border-bottom: 2px solid #088ed6;
+}
+.collapse ul li:hover a[href="landmark.html"]:hover, .collapse ul li a[href="bolly.html"]:hover{
+    transition: all .4s;
+    border-bottom: 2px solid #088ed6;
+}
+.collapse ul li a[href="bolly.html"]:hover{
+    transition: all .4s;
+    border-right: 1px solid #088ed6;
+    border-bottom: 2px solid #088ed6;
+}
+
+.dark-overlay{
+    background-color: rgba(0,0,0,.7);
+    min-height: 700px;
+    background-attachment: fixed;
+    position: relative;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    /* padding-bottom: 10em; */
+}
+.navbar{
+
+    border-bottom: #088ed6 3px solid;
+    opacity: .95;
+}
+.card-form{
+    opacity: .8;
+}
+
+.mq{
+    padding-bottom: 100px;
+}
+.crd{
+    transition: all .2s;
+    border-top-right-radius: 8px !important;  
+    border-bottom-left-radius: 0px !important;
+    border-top-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}
+.crd:hover{
+    transition: all .5s;
+    border-top-right-radius: 55px !important;
+    border-right-width: 3px;
+    border-right-color: white;
+    border-bottom-right-radius: -7px !important;
+    opacity: 1;
+}
+.crd:focus{
+    transition: all .5s;
+    border-top-right-radius: 40px !important;
+    
+}
+
+.cad{
+    background-color: white;
+    /* border-top-right-radius: 0px !important; */
+    border-bottom-left-radius: 5px !important;
+    border-bottom-left-radius: 0px !important;
+    border-top-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    
+}
+.jumbotron{
+    margin-bottom: 0 !important;
+}
+
+.location a{
+    color: #aba;
+}
+footer p:hover, .location a:hover{
+    color: #088ed6;
+}
+.phone{
+    margin-top: -15px !important;
+}
+.card-group .bg-gray{
+    background-color: #aaa;
+}
+
+/* .bg .container{
+    background-color: #333 !important;
+} */
+.bg{
+    margin-top: 0;
+    background-color:#eee !important;
+}
+.spacing{
+    height: 0em;
+    
+    /* padding: 0 1em; */
+}
+
+.bg-inner{
+    background: url(../images/kfc_restaurant_.jpg) no-repeat center;
+    background-size: cover;
+    height: 670px;  
+    background-attachment: fixed;
+
+
+}
+.contain{
+    background-color: rgba(0,0,0, 0.8);
+    height: 670px;
+}
+.bg-gray{
+    opacity: .7;
+    transition: opacity .5s;
+}
+.bg-gray:hover{
+    opacity: 1;
+    transition: opacity .5s;
+}
+
+
+/* media query */
+@media(max-width: 992px){
+    .pb{
+        padding-bottom: 20px  !important;
+    }
+    .mq{
+        padding-bottom: 0 !important;
+    }
+    .card{
+        border-bottom-left-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+
+    }
+    .animate-it{
+        animation-iteration-count: 1;
+    }
+}
+
+/* first nav link querry */
+@media(max-width: 575px){
+    .collape ul li:hover, .collapse ul li:hover a:hover{
+        transition: all .5s;
+        border-left: 0px solid transparent !important;
+        border-right: 0;
+        border-bottom: 2px solid #088ed6 !important;
+    }
+}
