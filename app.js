@@ -18,8 +18,8 @@ window.onload = function () {
             if( e.target.textContent){
                 num = (Number(cart.textContent) + 1);
                 cart.textContent = ' '+num;
-            console.log(e.target.firstElementChild);
-            console.log
+            console.log(e.target.parentElement.parentElement.firstElementChild.firstElementChild.src);
+            
         }
         }
         else{ 
