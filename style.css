@@ -48,7 +48,7 @@ body{
 }
 #home{
     background-color: #333 !important;
-    background: url(../images/Owerri-mall-store.jpg) no-repeat;
+    background: url(images/Owerri-mall-store.jpg) no-repeat;
     background-attachment: fixed;
     background-position: center;
     min-height: 700px;
@@ -159,7 +159,7 @@ footer p:hover, .location a:hover{
 }
 
 .bg-inner{
-    background: url(../images/kfc_restaurant_.jpg) no-repeat center;
+    background: url(images/kfc_restaurant_.jpg) no-repeat center;
     background-size: cover;
     height: 670px;  
     background-attachment: fixed;
