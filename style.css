@@ -8,44 +8,69 @@ body{
 .animate-it{
     animation-name: color;
     animation-iteration-count: infinite;
-    animation-duration: 8s;
+    animation-duration: 15s;
     font-size: 20px;
     transform: scale(2);
     position: relative;
-    color: beige;
+    color: #cff;
     top: 1em;
-    /* overflow-x: hidden !important; */
+    
+    animation-timing-function: linear;
+    overflow-x: hidden !important;
 }
-@keyframes color{
+.animate{
+    position: relative;
+    left: 15em;
+    
+    animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.anime{
+    position: relative;
+    left: 15em;
+    animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+
+ @keyframes color{ 
     0%{
         text-decoration-line: line-through;
-        text-decoration-color: #fff;
-        text-decoration-style: wavy;
-        left: 0;
-        color: #fff;
+        text-decoration-color: #eba;
+        text-decoration-style: solid;
+        left: 1em;
+        color: #cff;
     }
     75%{
-        text-decoration-line: line-through;
-        text-decoration-color: #aaa;
+        color: #ccf;
+        text-decoration-line: line-through !important;
+        text-decoration-color: #ccf;
         text-decoration-style: wavy;
+        
         left: 100%;
-        color: #aaa;
+        
     }
     80%{
-        text-decoration-style: wavy;
-        text-decoration-color: transparent;   
+        text-decoration-style: solid;
+        text-decoration-color: #fcc;
+        position: relative;
+
+        top: -.6em;
 
     }
     
     100%
     {
         text-decoration-line: line-through;
-        text-decoration-color: #fff;
-        text-decoration-style: wavy;
-        /* opacity: 0; */
+        text-decoration-color: #fcc;
+        text-decoration-style: solid;
+        bottom: -.5em;
+
 
     }
 }
+
+
+
+
 #home{
     background-color: #333 !important;
     background: url(images/Owerri-mall-store.jpg) no-repeat;
@@ -58,6 +83,10 @@ body{
 .home-inner{
     padding-top: 140px;
 
+}
+.collape ul li a[href="law-school.html"]:active{
+    border-bottom: 2px solid #088ed6 !important;
+    color: red !important;
 }
 .collapse ul li:hover a[href="law-school.html"]:hover{
     transition: all .4s;
@@ -179,6 +208,58 @@ footer p:hover, .location a:hover{
     transition: opacity .5s;
 }
 
+
+/* js classes */
+    .show{
+        position: fixed;
+        right: 0;
+        top: 4em;
+        width: 40% !important;
+        transition: all .3s;
+        /* opacity: 1; */
+    }
+    .hide{
+        position: fixed !important;
+        right: -50%;
+        top: 5em;
+        width: 0% !important;
+        transition: all .4s;
+    }
+
+    #page1:focus-within{
+        transform: scale(1);
+        transition: all .5s;
+    }
+    #page1{
+        float: right;
+        background: linear-gradient(0deg, rgb(43, 4, 61), #333);
+        transition: all .5s;
+        overflow-X: hidden;
+        overflow-Y: scroll !important;
+        width: 20em;
+        height: 100%;
+        
+        max-height: 600px;
+    }
+    .clap-in{
+        position: relative;
+
+        width: 60%;
+        transition: all .4s;
+    }
+    .clap-out{
+        position: relative;
+        left: 0;
+        width: 100%;
+        transition: all .3s;
+    }
+
+#page2{
+    /* width: 100%; */
+    transition: all .5s;
+}
+
+    
 
 /* media query */
 @media(max-width: 992px){
