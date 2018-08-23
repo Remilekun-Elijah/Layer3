@@ -1,0 +1,68 @@
+    .show{
+        /* right: 0; */
+        top: 4em;
+        width: 40% !important;
+        transition: all .3s;
+        
+    }
+    .hide{
+
+        /* right: -50%; */
+        top: 5em;
+        width: 0% !important;
+        transition: all .4s;
+    }
+
+/*
+    #page1:focus-within{
+        transform: scale(1);l
+        transition: all .5s;
+    }
+*/
+    #page1{
+        float: right;
+        background: #ccc;
+        transition: all .5s;
+        overflow-X: hidden;
+        overflow-Y: scroll !important;
+        width: 20em;
+        height: 100%;
+        
+        max-height: 600px;
+    }
+    .clap-in{
+        position: relative;
+
+        width: 60%;
+        transition: all .4s;
+    }
+    .clap-out{
+        position: relative;
+        /* left: 0; */
+        /* width: 90%; */
+        transition: all .3s;
+    }
+
+#page2{
+    transition: all .5s;
+}
+
+@media(max-width: /*1000px*/ 575px){
+    .clap-in{
+        display: none;
+        /* width: 0; */
+        transition: all .4s;
+    }
+    .show{
+        width: 100% !important;
+        transition: .4s;
+    }
+    .clap-out{
+        display: block;
+        transition: all .4s;
+    }
+    .hide{
+        width: 0;
+        transition: all .4s;
+    }
+}

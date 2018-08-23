@@ -174,17 +174,12 @@ footer p:hover, .location a:hover{
     background-color: #aaa;
 }
 
-/* .bg .container{
-    background-color: #333 !important;
-} */
 .bg{
     margin-top: 0;
     background-color:#eee !important;
 }
 .spacing{
     height: 0em;
-    
-    /* padding: 0 1em; */
 }
 
 .bg-inner{
@@ -192,8 +187,6 @@ footer p:hover, .location a:hover{
     background-size: cover;
     height: 670px;  
     background-attachment: fixed;
-
-
 }
 .contain{
     background-color: rgba(0,0,0, 0.8);
@@ -210,54 +203,6 @@ footer p:hover, .location a:hover{
 
 
 /* js classes */
-    .show{
-        position: fixed;
-        right: 0;
-        top: 4em;
-        width: 40% !important;
-        transition: all .3s;
-        /* opacity: 1; */
-    }
-    .hide{
-        position: fixed !important;
-        right: -50%;
-        top: 5em;
-        width: 0% !important;
-        transition: all .4s;
-    }
-
-    #page1:focus-within{
-        transform: scale(1);
-        transition: all .5s;
-    }
-    #page1{
-        float: right;
-        background: linear-gradient(0deg, rgb(43, 4, 61), #333);
-        transition: all .5s;
-        overflow-X: hidden;
-        overflow-Y: scroll !important;
-        width: 20em;
-        height: 100%;
-        
-        max-height: 600px;
-    }
-    .clap-in{
-        position: relative;
-
-        width: 60%;
-        transition: all .4s;
-    }
-    .clap-out{
-        position: relative;
-        left: 0;
-        width: 100%;
-        transition: all .3s;
-    }
-
-#page2{
-    /* width: 100%; */
-    transition: all .5s;
-}
 
     
 

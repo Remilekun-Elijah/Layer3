@@ -1,9 +1,11 @@
+var console, window;
 window.onload = function () {
+    "use-strict";
     console.clear();
 
     // var html = document.querySelector('html'), body = document.querySelector("body");
 
-    var cart = document.querySelector("#cart");
+    let cart = document.querySelector("#cart");
     const buy = document.querySelectorAll("#buy");
     let cartItem = document.createElement('div');
         
@@ -91,7 +93,7 @@ window.onload = function () {
     var page1 = document.querySelector("#page1"); 
     var page2 = document.querySelector("#page2"); 
 
-    page1.classList = ' hide';
+    page1.classList = ' hide position-fixed';
     page1.appendChild(cartItem);
 
             var showCart = () => {
