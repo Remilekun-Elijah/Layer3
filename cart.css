@@ -1,5 +1,5 @@
     .show{
-         right: 0; 
+         right: -5%; 
         top: 4em;
         width: 40% !important;
         transition: all .3s;
@@ -7,7 +7,7 @@
     }
     .hide{
 
-        right: -50%; 
+        right: -55%; 
         top: 5em;
         width: 0% !important;
         transition: all .4s;
