@@ -3,7 +3,7 @@ body{
     background-attachment: fixed;
     background-size: cover;
     background: repeating-linear-gradient(90deg, #088ed6,  #333) no-repeat !important;
-    overflow-x: hidden;
+    overflow-x: hidden !important;  
 }
 .animate-it{
     animation-name: color;
