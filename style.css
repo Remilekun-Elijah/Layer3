@@ -68,7 +68,11 @@ body{
     }
 }
 
-
+.card-subtitle ul li {
+    /* display: inline-block; */
+    list-style: disc !important;
+    color: #088ed6;
+}
 
 
 #home{
