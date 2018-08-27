@@ -49,6 +49,10 @@
     transition: all .5s;
 }
 
+.fa-remove:hover{
+    color: #088ed6;
+}
+
 @media(max-width: 575px){
     .clap-in{
         display: none;

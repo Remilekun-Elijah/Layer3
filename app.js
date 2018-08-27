@@ -43,7 +43,7 @@ window.onload = function () {
 
                 // create & add element to cart for each clicked item
                 var div = document.createElement('div'), img = document.createElement('img'), del = document.createElement('span');
-
+                
                 let details, ul = document.createElement('ul'); 
         var price = e.target.parentElement.parentElement.children[2].firstElementChild.firstElementChild.firstElementChild.textContent;
         // console.log(price);
@@ -64,7 +64,7 @@ window.onload = function () {
                 img.style.height = '20%';
                 img.style.borderRadius = "90%";
                 del.classList = 'fa fa-remove ml-lg-5 pl-5 mt-lg-4';
-                
+                // document.querySelector('fa fa-remove:hover').style.color = 'teal';
                 div.append(img);
                 div.append(del);                
                 var div_style = div.style;
@@ -75,12 +75,15 @@ window.onload = function () {
                 
                 // cartIte m.style.display = 'none';
                 cartItem.classList.replace("show","hide");
-
+                containerDiv.style.marginBottom = '20px';
                 containerDiv.append(div);
+                
                 del.addEventListener('click', e => {
                     
                     if(e.target.className.includes('fa')){
-                        e.target.parentElement.parentElement.removeChild(e.target.parentElement);
+                        let div = e.target.parentElement.remove();
+                            div.remove();
+                        console.log(div);
                         var up;
                         up = (Number(span.textContent) -1);
                         console.log(up);
