@@ -49,7 +49,8 @@ window.onload = function () {
         // console.log(price);
         
 
-                details = `
+                details = //html
+                `
                     <li class='mr-5'><i class='fa fa-map-marker'></i> Law School</li>
                     <li><i class='fa fa-money text-danger'> ${price} </i></li>
                 `;
@@ -137,7 +138,7 @@ window.onload = function () {
                 
                 if(window.innerWidth <= 550 ){
                     document.querySelector("footer").classList = ' foot-cart';
-                    document.querySelector("footer").classList.toggle('foot-cart');
+                    document.querySelector("footer").classList.toggleClass('foot-cart');
                     console.log(document.querySelector("footer"));
                 }
             
@@ -149,32 +150,6 @@ window.onload = function () {
 /////////////////////////
 var arr = [];
         var order = document.querySelectorAll('#order');
-        amount = order.textContent;
-        
-        // console.log(price);
-        
-        
-// console.log(arr);
-//order.forEach((orders, e) => {
-//    // var price = e.target.parentElement.parentElement.children[2].firstElementChild.firstElementChild.firstElementChild.textContent;
-//    buy.forEach(buys => { 
-//    buys.addEventListener('click', function(){
-//        if(arr.length !== 0){
-//         
-//          
-//            orders.textContent = arr.push(Number(arr.length+1));
-//            
-//            // console.log('from if ' + arr);
-//            // arr = [price];
-//        }else{
-//          
-//          
-//            
-//            orders.textContent = arr.push(arr.length+1);
-//            // console.log('from else '+ arr);
-//        }
-//    })
-//    });
-//});
+        amount = order.textContent;        
 
 };
