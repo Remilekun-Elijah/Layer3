@@ -2,8 +2,7 @@ var console, window;
 window.onload = function () {
 //    "use strict";
 
-
-    console.clear();
+ 
 
     // var html = document.querySelector('html'), body = document.querySelector("body");
 
