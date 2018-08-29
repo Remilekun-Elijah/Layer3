@@ -64,7 +64,7 @@ window.onload = function () {
                 img.style.height = '20%';
                 img.style.borderRadius = "90%";
                 del.classList = 'fa fa-remove ml-lg-5 pl-5 mt-lg-4';
-                // document.querySelector('fa fa-remove:hover').style.color = 'teal';
+                
                 div.append(img);
                 div.append(del);                
                 var div_style = div.style;
@@ -81,13 +81,14 @@ window.onload = function () {
                 del.addEventListener('click', e => {
                     
                     if(e.target.className.includes('fa')){
-                        let div = e.target.parentElement.remove();
+                        let div = e.target.parentElement.parentElement.removeChild(e.target.parentElement);
                             div.remove();
                         console.log(div);
                         var up;
                         up = (Number(span.textContent) -1);
                         console.log(up);
                         span.textContent = ' '.concat(up);
+                        
                         order.innerText = (Number(order.innerText) -1);
                         // console.log(e.target.parentElement);
                     }
@@ -114,16 +115,14 @@ window.onload = function () {
         
         cartItem.style.width = '100%';
         cartItem.style.marginTop = '1em';
-        
-        
-        // cartItem.style.float = 'right';
 
         cartItem.classList = 'bg-secondary';
-        // cartItem.style.display = 'none';
-    var page1 = document.querySelector("#page1"); 
+        
+    
     var page2 = document.querySelector("#page2"); 
 
-    page1.classList = ' hide position-fixed';
+    page1.classList = 'hide position-fixed';
+    console.log(document.querySelector("#page1"));
     page1.appendChild(cartItem);
 
             var showCart = () => {
@@ -138,11 +137,20 @@ window.onload = function () {
                     page2.classList = ' clap-out';
                 
                 }
-                
-                if(window.innerWidth <= 550 ){
-                    document.querySelector("footer").classList = ' foot-cart';
-                    document.querySelector("footer").classList.toggleClass('foot-cart');
-                    console.log(document.querySelector("footer"));
+                const footer = document.querySelector("footer");
+                if(window.innerWidth <= 550 && page1.classList.contains('show')){
+                    
+                        footer.classList.replace('footer', 'hide');
+                        console.log(footer);
+                       
+                }
+                else if(window.innerWidth <= 550 && page1.classList.contains('hide')){
+                    
+                    page2.style.borderBottomRightRadius = '0';
+                    page2.style.borderBottomLeftRadius = '0';
+
+                    footer.classList.replace('hide', 'footer');
+                    console.log(footer);
                 }
             
             };
