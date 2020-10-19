@@ -1,0 +1,342 @@
+{
+	"location": [{
+			"lawschool": {
+				"name": "Law School",
+				"location": " Nigeria Law School (VI, Lagos)",
+				"food": [{
+						"name": "Jollof Rice",
+						"img": "../assets/images/jollof2.jpg",
+						"price": 100,
+						"min": 50,
+						"desc": "Contact us for more details about this food @layer3-food.gmail.com."
+					}, {
+						"name": "Moin Moin",
+						"img": "../assets/images/moin-moin.jpg",
+						"price": 100,
+						"min": 100,
+						"desc": "Contact us for more details about this food @layer3-food.gmail.com."
+					},
+					{
+						"name": "Fried Rice",
+						"img": "../assets/images/fried_rice.jpg",
+						"price": 100,
+						"min": 50,
+						"desc": "Contact us for more details about this food @layer3-food.gmail.com."
+					},
+					{
+						"name": "Coconut Rice",
+						"img": "../assets/images/coconut_rice.jpeg",
+						"price": 100,
+						"min": 50,
+						"desc": "Contact us for more details about this food @layer3-food.gmail.com."
+					},
+					{
+						"name": "Big Beef",
+						"img": "../assets/images/beef_100.jpg",
+						"price": 100,
+						"min": 100,
+						"desc": "Contact us for more details about this food @layer3-food.gmail.com."
+					},
+					{
+						"name": "Small Beef",
+						"img": "../assets/images/beef.jpg",
+						"price": 50,
+						"min": 50,
+						"desc": "Contact us for more details about this food @layer3-food.gmail.com."
+					}
+				]
+
+			}
+		},
+		{
+			"landmark": {
+				"name": "Landmark",
+				"location": " Off Landmark Event Center (VI, Lagos)",
+				"food": [{
+						"name": "Fried Fish",
+						"img": "../assets/images/fish2.jpg",
+						"price": 100,
+						"min": 100,
+						"desc": "Contact us for more details about this food @layer3-food.gmail.com."
+					},
+					{
+						"name": "Amala",
+						"img": "../assets/images/amala2.jpeg",
+						"price": 100,
+						"min": 100,
+						"desc": "Contact us for more details about this food @layer3-food.gmail.com."
+					},
+					{
+						"name": "Ewedu",
+						"img": "../assets/images/ewedu.jpg",
+						"price": 0,
+						"min": 0,
+						"desc": "Contact us for more details about this food @layer3-food.gmail.com."
+					},
+					{
+						"name": "Gbegiri",
+						"img": "../assets/images/gbegiri.jpg",
+						"price": 0,
+						"min": 0,
+						"desc": "Contact us for more details about this food @layer3-food.gmail.com."
+					},
+					{
+						"name": "Big Beef",
+						"img": "../assets/images/beef_100.jpg",
+						"price": 100,
+						"min": 100,
+						"desc": "Contact us for more details about this food @layer3-food.gmail.com."
+					},
+					{
+						"name": "Jollof Rice",
+						"img": "../assets/images/Jollof_rice2.jpg",
+						"price": 100,
+						"min": 50,
+						"desc":"Contact us for more details about this food @layer3-food.gmail.com."
+					},
+					{
+						"name": "Fried Plantain",
+						"img": "../assets/images/plantain.jpg",
+						"price": 50,
+						"min": 50,
+						"desc": "Contact us for more details about this food @layer3-food.gmail.com."
+					}
+				]
+			}
+		},
+		{
+			"jideoki": {
+				"name": "Jide Oki",
+				"location": " Off Ligali Ayorinde (VI, Lagos)",
+				"food": [{
+						"name": "Kpomo",
+						"img": "../assets/images/kpomo2.jpg",
+						"price": 50,
+						"min": 50,
+						"desc": "Contact us for more details about this food @layer3-food.gmail.com."
+					},
+					{
+						"name": "Beans",
+						"img": "../assets/images/ms-beans.jpeg",
+						"price": 50,
+						"min": 50,
+						"desc": "Contact us for more details about this food @layer3-food.gmail.com."
+					},
+					{
+						"name": "Boli",
+						"img": "../assets/images/boli1.jpg",
+						"price": 100,
+						"min": 50,
+						"desc": "Contact us for more details about this food @layer3-food.gmail.com."
+					},
+					{
+						"name": "Sauce",
+						"img": "../assets/images/stew.jpg",
+						"price": 0,
+						"min": 0,
+						"desc": "Contact us for more details about this food @layer3-food.gmail.com."
+					},{
+						"name": "Potato",
+						"img": "../assets/images/potato.jpg",
+						"price": 50,
+						"min": 50,
+						"desc": "Contact us for more details about this food @layer3-food.gmail.com."
+					},
+					{
+						"name": "Vegetables",
+						"img": "../assets/images/vegetables.jpg",
+						"price": 0,
+						"min": 0,
+						"desc": "Contact us for more details about this food @layer3-food.gmail.com."
+					},
+					{
+						"name": "Onion",
+						"img": "../assets/images/onion.jpg",
+						"price": 0,
+						"min": 0,
+						"desc": "Contact us for more details about this item @layer3-food.gmail.com."
+					},
+					{
+						"name": "Roasted Yam",
+						"img": "../assets/images/yam.jpg",
+						"price": 50,
+						"min": 50,
+						"desc": "Contact us for more details about this item @layer3-food.gmail.com."
+					},
+					{
+						"name": "Titus Fish",
+						"img": "../assets/images/titus-stew.jpg",
+						"price": 100,
+						"min": 100,
+						"desc": "Contact us for more details about this food @layer3-food.gmail.com."
+					},
+					{
+						"name": "Kpanla Fish",
+						"img": "../assets/images/kpanla-stew.jpg",
+						"price": 100,
+						"min": 100,
+						"desc": "Contact us for more details about this food @layer3-food.gmail.com."
+					},
+					{
+						"name": "Small G-nut",
+						"img": "../assets/images/groundnut.jpg",
+						"price": 50,
+						"min" : 50,
+						"desc": "Contact us for more details about this food @layer3-food.gmail.com."
+					},
+					{
+						"name": "Bottled G-nut",
+						"img": "../assets/images/bottle-gnut.jpg",
+						"price": 500,
+						"min": 500,
+						"desc": "Contact us for more details about this food @layer3-food.gmail.com."
+					}
+
+				]
+			}
+		},
+		{
+			"moshood": {
+				"name": "Moshood Olugbani",
+				"location": " Off Ligali Ayorinde (VI, Lagos)",
+				"food": [
+					{
+						"name": "Jollof Rice",
+						"img": "../assets/images/ms-jollof-rice2.jpg",
+						"price": 100,
+						"min": 50,
+						"desc": "Contact us for more details about this food @layer3-food.gmail.com."
+					},
+					{
+						"name": "White Rice",
+						"img": "../assets/images/ms-white-rice.jpg",
+						"price": 100,
+						"min": 50,
+						"desc": "Contact us for more details about this food @layer3-food.gmail.com."
+					},
+					{
+						"name": "Beans",
+						"img": "../assets/images/ms-beans.jpeg",
+						"price": 100,
+						"min": 50,
+						"desc": "Contact us for more details about this food @layer3-food.gmail.com."
+					},
+					{
+						"name": "Fried Meat",
+						"img": "../assets/images/ms-fried-meat.jpg",
+						"price": 50,
+						"min": 50,
+						"desc": "Contact us for more details about this food @layer3-food.gmail.com."
+					},
+					{
+						"name": "Egg",
+						"img": "../assets/images/eggs-bg.png",
+						"price": 50,
+						"min": 50,
+						"desc": "Contact us for more details about this food @layer3-food.gmail.com."
+					},
+					{
+						"name": "Plantain",
+						"img": "../assets/images/plantain.jpg",
+						"price": 50,
+						"min": 50,
+						"desc": "Contact us for more details about this food @layer3-food.gmail.com."
+					},
+					{
+						"name": "Kpomo",
+						"img": "../assets/images/kpomo2.jpg",
+						"price": 50,
+						"min": 50,
+						"desc": "Contact us for more details about this food @layer3-food.gmail.com."
+					},
+					{
+						"name": "Spaghetti",
+						"img": "../assets/images/spag.jpeg",
+						"price": 50,
+						"min": 50,
+						"desc": "Contact us for more details about this food @layer3-food.gmail.com."
+					},
+					{
+						"name": "Salad",
+						"img": "../assets/images/ms-salad.jpg",
+						"price": 100,
+						"min": 50,
+						"desc": "Contact us for more details about this food @layer3-food.gmail.com."
+					},
+					{
+						"name": "Beans Porridge",
+						"img": "../assets/images/ms-beans-porridge.jpeg",
+						"price": 100,
+						"min": 50,
+						"desc": "Contact us for more details about this food @layer3-food.gmail.com."
+					},
+					{
+						"name": "Stewy Meat",
+						"img": "../assets/images/beef_100.jpg",
+						"price": 50,
+						"min": 50,
+						"desc": "Contact us for more details about this food @layer3-food.gmail.com."
+					},
+					{
+						"name": "Fried Fish",
+						"img": "../assets/images/ms-fried-fish.jpg",
+						"price": 100,
+						"min" : 100,
+						"desc": "Contact us for more details about this food @layer3-food.gmail.com."
+					},
+					{
+						"name": "Boiled Fish",
+						"img": "../assets/images/ms-boiled-fish.jpg",
+						"price": 100,
+						"min": 100,
+						"desc": "Contact us for more details about this food @layer3-food.gmail.com."
+					},
+					{
+						"name": "Yam",
+						"img": "../assets/images/ms-yam.jpeg",
+						"price": 100,
+						"min": 50,
+						"desc": "Contact us for more details about this food @layer3-food.gmail.com."
+					},
+					{
+						"name": "Yam Porridge",
+						"img": "../assets/images/ms-yam-porridge.jpg",
+						"price": 100,
+						"min": 50,
+						"desc": "Contact us for more details about this food @layer3-food.gmail.com."
+					},
+					{
+						"name": "Vegetable Soup",
+						"img": "../assets/images/ms-veggies.jpg",
+						"price": 100,
+						"min": 50,
+						"desc": "Contact us for more details about this item @layer3-food.gmail.com."
+					},
+					{
+						"name": "Garri",
+						"img": "../assets/images/ms-eba.jpeg",
+						"price": 100,
+						"min": 100,
+						"desc": "Contact us for more details about this item @layer3-food.gmail.com."
+					},
+					{
+						"name": "Eguci Soup",
+						"img": "../assets/images/ms-eguci.jpeg",
+						"price": 0,
+						"min": 0,
+						"desc": "Contact us for more details about this item @layer3-food.gmail.com."
+					},
+					{
+						"name": "Wheat",
+						"img": "../assets/images/ms-wheat.jpg",
+						"price": 100,
+						"min": 100,
+						"desc": "Contact us for more details about this item @layer3-food.gmail.com."
+					}
+
+				]
+			}
+		}
+	]
+
+}

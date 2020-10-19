@@ -1,350 +1,811 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title> Home | Welcome </title>
-    
-    <!--   local -->
-    <!-- <link type="text/css" rel="stylesheet" href="work app/library/animate-3.7.min.css">
-
-    <link type="text/css" rel="stylesheet" href="work app/library/font-awesome-4.7.min.css">
-
-    <link type="text/css" rel="stylesheet" href="work app/library/bootstrap-4.min.css"> -->
-
-    <link rel="stylesheet" type="text/css"  href="style.css">
-
-        <!-- CDN Links -->
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#dc3545">
+    <!-- SEARCH CONSOLE -->
+    <meta name="description"
+        content="Let's help you locate the nearest restaurants, mama-put or grocery malls closest to you under two minutes">
+    <meta name="keywords"
+        content="layer3 food, Layer3 food, mama put, online restaurants, buy food online, jumia food, Jumia Food, uber eat, Uber Eat, Deliveroo, deliveroo, layer3 ng, Layer3 ng, Layer3 Ng, layer3 lmt, layer3 limited, layer3.com.ng, layer3.com">
+    <meta name="robots" content="index,follow">
+    <meta name="google-site-verification" content="ioIn-4W8w_wj--A7eBfGMDGDE_y1r2gb1rSVwlahZq0" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142202272-1"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="/__/firebase/6.2.3/firebase-app.js"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-142202272-1');
+    </script>
+    <script>
+        ! function (n, e) {
+            var t, o, i, c = [],
+                f = {
+                    passive: !0,
+                    capture: !0
+                },
+                r = new Date,
+                a = "pointerup",
+                u = "pointercancel";
+            function p(n, c) {
+                t || (t = c, o = n, i = new Date, w(e), s())
+            }
+            function s() {
+                o >= 0 && o < i - r && (c.forEach(function (n) {
+                    n(o, t)
+                }), c = [])
+            }
+            function l(t) {
+                if (t.cancelable) {
+                    var o = (t.timeStamp > 1e12 ? new Date : performance.now()) - t.timeStamp;
+                    "pointerdown" == t.type ? function (t, o) {
+                        function i() {
+                            p(t, o), r()
+                        }
+                        function c() {
+                            r()
+                        }
+                        function r() {
+                            e(a, i, f), e(u, c, f)
+                        }
+                        n(a, i, f), n(u, c, f)
+                    }(o, t) : p(o, t)
+                }
+            }
+            function w(n) {
+                ["click", "mousedown", "keydown", "touchstart", "pointerdown"].forEach(function (e) {
+                    n(e, l, f)
+                })
+            }
+            w(n), self.perfMetrics = self.perfMetrics || {}, self.perfMetrics.onFirstInputDelay = function (n) {
+                c.push(n), s()
+            }
+        }(addEventListener, removeEventListener);
+    </script>
+    <!-- END SEARCH CONSOLE -->
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href='assets/codes/css/style.css'>
+    <link href='assets/library/font-awesome-4.7.min.css' rel="stylesheet" type="text/css">
+    <link href='assets/library/animate-3.7.min.css' rel="stylesheet" type="text/css">
+    <link href='assets/codes/css/responsiveHomepage.css' rel="stylesheet" type="text/css">
+    <link href='assets/library/fontSize.css' rel="stylesheet" type="text/css">
     <!-- font awesome -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='assets/library/bootstrap-4.min.css' type='text/css' rel="stylesheet">
+    <link rel="shortcut icon" href="assets/images/images.png">
+    <title>Layer3 Food | bringing food stores and grocery malls to their customers </title>
+    <!-- <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>  -->
+    <!-- <script> 
+          // Initialize Firebase
+        //   var config = {
+        //     apiKey: "AIzaSyD7VedzjQDKZI_PjBXitu6c4kLHknG2Uy0",
+        //     authDomain: "layer3-food.firebaseapp.com",
+        //     databaseURL: "https://layer3-food.firebaseio.com",
+        //     projectId: "layer3-food",
+        //     storageBucket: "layer3-food.appspot.com",
+        //     messagingSenderId: "404087299531"
+        //   };
+        //   firebase.initializeApp(config);
+        // </script>
+        -->
+    <!-- register service worker -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(function () {
+                        console.log("Service Worker Registered, Cheers to PWA Fire!");
+                    });
+            });
+        }
+    </script>
+    <!-- end of service worker -->
+    <!-- start of web manifest -->
+    <link rel="manifest" href="/manifest.json">
+    <!-- end of web manifest -->
+    <style>
+        .mb-5 img {
+            width: 400px;
+        }
 
-    <!-- animate css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+        @media(max-width: 768px) {
+            .col-12 .display-4 {
+                text-align: center;
+            }
+        }
+    </style>
 </head>
-<body >
-    
- <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-     <div class="container">
-        <a href="index.html" class="navbar-brand"> <i class="fa fa-cutlery" style='color: #088ed6; font-size: 30px;'></i> Kitchen</a>
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbar">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a href="law-school.html" class="nav-link">Law School</a>
-                </li>
-                <li class="nav-item">
-                  <a href="landmark.html" class="nav-link">Landmark</a>
-               </li>
-                <li class="nav-item">
-                    <a href="bolly.html" class="nav-link">Bolly</a>
-               </li>
-            </ul>
+
+<body>
+    <!-- Navbar section -->
+    <!-- Log Out Modal-->
+    <div class="modal fade" id="logoutModal">
+        <div class="modal-dialog modal-dialog-centerd animated swing">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <h3>Are you sure ?</h3>
+                </div>
+                <div class="modal-footer">
+                    <button data-dismiss='modal' class="btn pull-left">Not yet</button>
+                    <button class="btn btn-danger pull-right" id='logout' data-dismiss="modal">Yes sure!</button>
+                </div>
+            </div>
         </div>
     </div>
- </nav>
-    
- <!-- law school -->
- <header id="home">
-    <div class="dark-overlay">
-        <div class="home-inner">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <h1 class="display-4"><i class="fa fa-quote-left"></i> <b>An hour break</b> sure can't be enough in that massive queue <i class="fa fa-quote-right"></i></h1>
-                    </div>    
+    <!-- Settings Modal -->
+    <div class="modal fade h-100 w-100" id="updateModal">
+        <div class="modal-dialog animated bounceInUp">
+            <div class="modal-content">
+                <div class="modal-header bg-danger">
+                    <h4 class="modal-title text-white">Profile</h4>
+                    <button data-dismiss="modal" class="fa close text-white">
+                        &times;
+                    </button>
                 </div>
-                <div class="row pt-5 mq">
-                    <div class="col-lg-8">
-                        <div class="d-flex flex-row">
-                            <div class="p-4 align-self-start">
-
-                                <i class="fa fa-check-circle"></i>
-                            </div>
-                            <div class="p-4 align-self-end">
-                                    We offer chance of continuous work without being worried of what to eat.
-                            </div>
+                <div class="modal-body ">
+                    <div class=" card">
+                        <div class="card-header">
+                            <ul class="nav nav-tabs card-header-tabs">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link active text-danger" style="color:#dc3545 !important"
+                                        id="info"> Your info</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" id="orders" class="nav-link text-danger"
+                                        style="color:#dc3545 !important">Orders</a>
+                                </li>
+                            </ul>
                         </div>
-
-                        <div class="d-flex flex-row">
+                        <div class="mb-4 mx-3">
+                            <!-- info start -->
+                            <div class="card-body bg-danger text-center mt-4" id="infoPanel">
+                                <h3 class="text-white"><i class="fa fa-user fa-2x "></i> </h3>
+                                <p class="text-white"> Update your information</p>
+                                <form>
+                                    <!-- Name -->
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Name" id='updateName' autocomplete="name"
+                                            class="form-control form-control-lg" required>
+                                        <p id="NameMsg"></p>
+                                    </div>
+                                    <!-- Email -->
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Office/House Address" id='updateEmail'
+                                            autocomplete="email" class="form-control form-control-lg" required>
+                                        <p id="EmailMsg"></p>
+                                    </div>
+                                    <!-- Number -->
+                                    <div class="form-group">
+                                        <input type="tel" placeholder="Phone Number"
+                                            class="form-control form-control-lg" id='updateNumber' autocomplete="tel"
+                                            required>
+                                        <p id="NumberMsg"></p>
+                                    </div>
+                                    <input type="submit" class="btn btn-block btn-outline-light form-control"
+                                        value="Update" id='updateSubmit' data-target="#" data-toggle="modal"
+                                        data-backdrop="static" disabled>
+                                </form>
+                            </div>
+                            <!-- info Ends -->
+                            <!-- orders start -->
+                            <div class="card-body  mt-1" id="orderPanel">
+                                <div class="container">
+                                    <h4 class="text-dark"> Your Orders (3)</h4>
+                                    <hr>
+                                    <ol class="mb-4">
+                                        <li>Order <a href='#' class="text-warning font-weight-bold ">32156</a></li>
+                                        <li>Order <a href="#" class="text-warning font-weight-bold ">33267</a></li>
+                                        <li>Order <a href="#" class="text-warning font-weight-bold ">34145</a></li>
+                                    </ol>
+                                    <p class="text-muted">Coming Soon...</p>
+                                </div>
+                            </div>
+                            <!-- orders Ends -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Settings modal Ends -->
+    <header id="home" class="pb-4">
+        <div class="dark-overlay">
+            <div class='text-light' id="home-inner">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <h1 class="text-sm-30 text-sm-center"><i class="fa fa-quote-left"></i> <b>An hour break</b>
+                                sure can't
+                                be enough in that massive queue <i class="fa fa-quote-right"></i></h1>
+                        </div>
+                    </div>
+                    <div class="row pt-5 align-items-center justify-content-around ">
+                        <div class="col-lg-8 col-sm-5">
+                            <div class="d-flex flex-row">
                                 <div class="p-4 align-self-start">
                                     <i class="fa fa-check-circle"></i>
                                 </div>
-                                <div class="p-4 align-self-end"> 
-                                    
-                                Efficient delivery time with high priority.
+                                <div class="p-4 align-self-end">
+                                    We offer chance of continuous work without being worried of what to eat.
                                 </div>
+                            </div>
+                            <div class="d-flex flex-row">
+                                <div class="p-4 align-self-start">
+                                    <i class="fa fa-check-circle"></i>
+                                </div>
+                                <div class="p-4 align-self-end">
+                                    Efficient delivery time with high priority.
+                                </div>
+                            </div>
+                            <div class="d-flex flex-row  pb">
+                                <div class="p-4 align-self-start">
+                                    <i class="fa fa-check-circle"></i>
+                                </div>
+                                <div class="p-4 align-self-end"> and it's 100 percent stress free.
+                                </div>
+                            </div>
                         </div>
+                        <!-- end col -->
+                        <div class="card bg-white border-0 col-sm-"
+                            style="border-left:1px solid white !important; border-top-left-radius: 2px !important;"
+                            id="regform">
+                            <div class="card bg-danger text-center card-form"
+                                style="border-top-left-radius: 30px !important">
+                                <div class="card-body">
+                                    <h3><i class="fa fa-user fa-2x"></i> </h3>
+                                    <p> Please fill out the form to register</p>
+                                    <form id="signUp">
+                                        <!-- Name -->
+                                        <div class="group mb-3">
+                                            <div class="group-wrapper" id='signUpName' class="animated shake">
+                                                <i class="fa fa-user pre"></i>
+                                                <input name="name" type="text" placeholder="Name" autocomplete="name"
+                                                    class="f-control text-danger" required>
+                                                <div class="d-flex border-left border-danger ml-1 flex-column justify-center animated"
+                                                    style='justify-content: center; visibility: hidden;'> <span
+                                                        class="pr-2 pl-1 text-danger fa bold"></span>
+                                                </div>
+                                            </div>
+                                            <p id="NameMsg"></p>
+                                        </div>
+                                        <!-- Number -->
+                                        <div class="group mb-3">
+                                            <div class="group-wrapper" id='signUpNumber'>
+                                                <i class="fa fa-phone pre"></i>
+                                                <input name="number" type="tel" placeholder="Phone Number"
+                                                    class="f-control" autocomplete="tel" require>
+                                                <div class="d-flex border-left border-danger ml-1 flex-column justify-centerbg-muted"
+                                                    style='justify-content: center;visibility: hidden;'> <span
+                                                        class="pr-2 pl-2 text-danger fa bold"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- select street -->
+                                        <div class="group mb-3" id='select-wrapper'>
+                                            <div class="group-wrapper">
+                                                <i class="fa fa-map-marker pre"></i>
+                                                <select name="street" required id="street" class="f-control"
+                                                    style="margin-right:5px">
+                                                    <option disabled selected>Select your street</option>
+                                                    <option name="street" value="Jide Oki">Jide Oki</option>
+                                                    <option name="street" value="Moshood Olugbani">Moshood Olugbani
+                                                    </option>
+                                                    <option name="street" value="Landmark">Landmark</option>
+                                                    <option name="street" value="Law School">Law School</option>
+                                                </select>
+                                            </div>
 
-                        <div class="d-flex flex-row  pb">
-                            <div class="p-4 align-self-start">
-
-                                <i class="fa fa-check-circle"></i>
+                                        </div>
+                                        <!-- office address -->
+                                        <div class="group mb-3">
+                                            <div class="group-wrapper" id='signUpEmail'>
+                                                <i class="fa fa-address-book pre"></i>
+                                                <input type="text" placeholder="Office/House Address" class=" f-control"
+                                                    name="office" required>
+                                                <div class="d-flex border-left border-danger ml-1 flex-column justify-center"
+                                                    style='justify-content: center; visibility: hidden;'> <span
+                                                        class="pr-2 pl-1 text-danger fa bold"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button name="submit" type="submit" class="btn btn-outline-light btn-block form-control"
+                                            value="" id='signUpSubmi' data-toggle="modal"  data-backdrop="static"
+                                            disabled>Submit</button>
+                                    </form>
+                                </div>
                             </div>
-                            <div class="p-4 align-self-end"> and it's 100 percent stress free. 
+                        </div>
+                        <a href="#" id="regHere"></a>
+                        <div class="col-lg-4">
+                            <div class="mb-5 ">
+                                <!-- img1 -->
+                                <div class="container-fluid text-center d-none img1" style="opacity:0">
+                                    <img src="assets/images/people/McD.jpg" alt="" class="img-fluid rounded-circle">
+                                    <i class="fa fa-caret-down text-secondary fa-2x d-block"></i>
+                                    <p class="lead">
+                                        <i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Perferendis, soluta?
+                                        <i class="fa fa-quote-right"></i>
+                                    </p>
+                                </div>
+                                <!-- img1 Ends -->
+                                <!-- img2 -->
+                                <div class="container-fluid text-center d-none img2" style="opacity:0">
+                                    <img src="assets/images/people/Mr Frank L3 20190128_024740.jpg" alt=""
+                                        class="img-fluid rounded-circle">
+                                    <i class="fa fa-caret-down text-secondary fa-2x d-block"></i>
+                                    <p class="lead">
+                                        <i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Perferendis, soluta?
+                                        <i class="fa fa-quote-right"></i>
+                                    </p>
+                                </div>
+                                <!-- img2 Ends -->
+                                <!-- img3 -->
+                                <div class="container-fluid text-center d-none img3" style="opacity:0">
+                                    <img src="assets/images/people/Mr Chinedu L3 20190128_024853.jpg" alt=""
+                                        class="img-fluid rounded-circle">
+                                    <i class="fa fa-caret-down text-secondary fa-2x d-block"></i>
+                                    <p class="lead">
+                                        <i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Perferendis, soluta?
+                                        <i class="fa fa-quote-right"></i>
+                                    </p>
+                                </div>
+                                <!-- img3 Ends -->
+                                <!-- img4 -->
+                                <div class="container-fluid text-center d-none img4" style="opacity:0">
+                                    <img src="assets/images/people/Mr Edwin Whatsapp 20190128_024954.jpg" alt=""
+                                        class="img-fluid rounded-circle">
+                                    <i class="fa fa-caret-down text-secondary fa-2x d-block"></i>
+                                    <p class="lead">
+                                        <i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Perferendis, soluta?
+                                        <i class="fa fa-quote-right"></i>
+                                    </p>
+                                </div>
+                                <!-- img4 Ends -->
+                                <!-- <a href="#" id="regHere"></a> -->
                             </div>
-
-                        </div>                     
-                            
-                    </div>
-                    <!-- end col -->
-
-                    <div class="col-lg-4">
-                        <div class="cad">
-                            <div class="card crd bg-primary text-center card-form">
-                                    <div class="card-body">
-                                        <h3><i class="fa fa-sign-in"></i> Sign Up Today</h3>
-                                        <p> Please fill out the form to register</p>
-                                        <form>
-                                        <div class="form-group">
-                                            <input type="text" placeholder="Username" class="form-control form-control-lg">
+                            <!-- signing up modal -->
+                            <div class="modal fade" id="signingUp">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header bg-dark rounded-0"></div>
+                                        <div class="modal-body">
+                                            <div class=" parent text-center">
+                                                <h3 class=" text-dark" id="text">
+                                                    Registering your details...
+                                                </h3>
+                                            </div>
                                         </div>
-                                        <!--  heyya -->
-                                        <div class="form-group">
-                                            <input type="email" placeholder="Email" class="form-control form-control-lg">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="number" placeholder="Phone number" class="form-control form-control-lg">
-                                        </div>
-                                        <input type="submit" class="btn btn-outline-light btn-block form-control" value="Submit">
-                                        </form>
                                     </div>
                                 </div>
                             </div>
-                          <!-- card 2 -->
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
- </header>
-    <!-- jumbotron -->
-    
-    <div class="jumbotron mb-0">
-        <div class="container mt-5 pt-5">
-            <footer>
-                <div class="row">
-
-                    <div class="col-md-8">
-                        <h3 class="text-secondary">To order any of your favorite food and refreshments, kindly Register with this button...</h3>
-
-                    </div>
-                    <div class="col-md-4 mt-5">
-                        <input type="button" value="Get Started" class="btn btn-primary pt-3 pb-3 pr-4 pl-4">
-                    </div>
-                </div>
-            </footer>
-        </div>
-        <!-- End container -->
-    </div>
-    <div class="spacing">
-        <div class="animate-it">
-            <i class="fa fa-space-shuttle anime  d-md-inline-block d-none"></i>
-            <i class="fa fa-fighter-jet  animate d-md-inline-block d-none"></i>
-        </div>
-    </div>
-    <!-- End jumbotron -->
-<div class="bg mt-0">
-    <div class="container mt-5 pt-5">
-        <p class="text-center display-4 text-secondary mt-5 pt-5 "> Law School Special</p>
-        <hr style="border-bottom: 1px solid #aaa !important; margin: 20px 15%;">
-        <div class="row ">
-            <div class="card-deck mt-4">
-                <div class="col-md-4 card  p-3">
-                    <div class="card-header">
-                            <img src="images/coconut_rice.jpeg" alt="coconut rice" class="card-img img-fluid">
-                    </div>
-                    <div class="card-title text-secondary">
-                        <h4>Coconut Rice</h4>
-                    </div>
-                    <div class="card-subtitle">
-                          <i class="number fa fa-money text-danger"> 100</i>
-                    </div>
-                </div>
-                
-                <!-- 2nd -->
-                <div class="col-md-4 card  p-3">
-                        <div class="card-header">
-                                <img src="images/jollof2-c.jpg" alt="Jollof rice" class="card-img img-fluid">
-                        </div>
-                        <div class="card-title text-secondary">
-                            <h4>Jollof Rice</h4>
-                        </div>
-                        <div class="card-subtitle">
-                            <i class="number fa fa-money text-danger"> 100</i>
-                        </div>
-                    </div>
-                
-                <!-- 3rd -->
-                <div class="col-md-4 card  p-3">
-                    <div class="card-header">
-                            <img src="images/fish.jpg"  alt="Fried fish" class="card-img img-fluid">
-                    </div>
-                    <div class="card-title text-secondary">
-                        <h4>Fried Fish</h4>
-                    </div>
-                    <div class="card-subtitle">
-                        <i class="number fa fa-money text-danger"> 300</i>
-                    </div>
-                </div>
-                    
-            </div>
-        </div>
-    </div>
-
-        <!-- new card -->
-    <div class="container mt-5 pb-5">
-            <p class="text-center display-4 text-secondary mt-5 pt-5 "> Landmark Special</p>
-            <hr style="border-bottom: 1px solid #aaa !important; margin: 20px 15%;" >
+    </header>
+    <br><br>
+    <!-- <div class="footer pb-2 px-3 home-location" style="border-radius: 0 !important; ">
         <div class="row">
-                <div class="card-deck mt-4">
-                    <div class="col-md-4 card  p-3">
-                        <div class="card-header">
-                             <img src="images/gbegiri1.jpg" alt="gbegiri soup" class="card-img img-fluid">
-                        </div>
-                        <div class="card-title text-secondary">
-                            <h4>Gbegiri soup</h4>
-                        </div>
-                        <div class="card-subtitle">
-                            <i class="number fa fa-money text-danger"> 0</i>
-                        </div>
-                    </div>
-                    
-                    <!-- 2nd -->
-                    <div class="col-md-4 card  p-3 d-md-block d-none">
-                            <div class="card-header">
-                                 <img src="images/ewedu.jpg" alt="Ewedu" class="card-img img-fluid">
-                            </div>
-                            <div class="card-title text-secondary">
-                                <h4>Ewedu Soup</h4>
-                            </div>
-                            <div class="card-subtitle">
-                                <i class="number fa fa-money text-danger"> 0</i>
-                            </div>
-                        </div>
-                    
-                    <!-- 3rd -->
-                    <div class="col-md-4 card  p-3">
-                            <div class="card-header">
-                                 <img src="images/amala1.jpeg"  alt="Amala" class="card-img img-fluid">
-                            </div>
-                            <div class="card-title text-secondary">
-                                <h4>Amala</h4>
-                            </div>
-                            <div class="card-subtitle">
-                                <i class="number fa fa-money text-danger"> 100</i>
-                            </div>
-                        </div>
-                        
+            <div class="col-lg-3 col-xl-3 col-md-5 col-sm-5  card card-body shadow-lg mx-auto">
+                <div class="">
+                    <img src="assets/images/ms-jollof-rice.jpeg" alt="porridge beans" srcset="" class='card-img'
+                        height="180">
                 </div>
+                <div class="card-title">
+                    <p class="d-flex justify-content-between ">
+                        <b class="d-flex align-items-center"> <i class='fa fa-map-marker text-danger lead'> </i><span
+                                class="text-hidden">_</span>Moshood</b>
+                        <strong class="shadow-sm bg-white px-1 rounded-left" style="position:relative; bottom:1.3em;">
+                            <i class="fa fa-truck text-danger "></i> 30mins
+                        </strong>
+                    </p>
+                    <span>
+                        <i class='fa fa-star text-danger lead'></i>
+                        <i class='fa fa-star text-danger lead'></i>
+                        <i class='fa fa-star text-danger lead'></i>
+                        <i class='fa fa-star text-danger lead'></i>
+                        <i class='fa fa-star-half-o text-danger' style='font-size: 18px'></i>
+                        <b>Rated 4.5</b>
+                    </span>
+                </div>
+                <div class="card-subtitle">
+                    <p class='text-secondary description'><i class="fa fa-cutlery text-danger"
+                            style='font-size: 18px'></i>
+                        Egusi Soup, Ewedu Soup, Vegetable Soup, Jollof & White Rice, Beans Porridge, Yam porridge,
+                        Salad...
+                    </p>
+                </div>
+                <a href="location/moshood.html" class="nav-link"><button
+                        class='btn btn-block btn-outline-danger'>Order</button></a>
+            </div>
+            <div
+                class="col-lg-3 col-xl-3 col-md-5 col-sm-5  card card-body shadow-lg mx-auto margin-top-sm-5 mt-md-0 mt-sm-0">
+                <div class="">
+                    <img src="assets/images/boli1.jpg" alt="amala" srcset="" class='card-img' height="180">
+                </div>
+                <div class="card-title">
+                    <p class="d-flex justify-content-between ">
+                        <b class="d-flex align-items-center"> <i class='lead fa fa-map-marker text-danger'> </i><span
+                                class="text-hidden">_ </span> Jide Oki</b>
+                        <strong class="shadow-sm bg-white px-1 rounded-left" style="position:relative; bottom:1.3em;">
+                            <i class="fa fa-truck text-danger "></i> 15mins
+                        </strong>
+                    </p>
+                    <span>
+                        <i class='fa fa-star lead text-danger'></i>
+                        <i class='fa fa-star lead text-danger'></i>
+                        <i class='fa fa-star lead text-danger'></i>
+                        <i class='fa fa-star-half-o text-danger' style='font-size: 18px'></i>
+                        <i class='fa fa-star-o text-danger'></i>
+                        <b>Rated 3.5</b> </span>
+                </div>
+                <div class="card-subtitle">
+                    <p class='text-secondary description'><i class="fa fa-cutlery text-danger"
+                            style=' font-size: 18px'></i>
+                        Roasted Plantain, Roasted Yam, Roasted Potato, Sauce, boiled corn, Fish, Kpomo,
+                        Groundnut...</p>
+                </div>
+                <a class='nav-link' href='location/jide-oki.html'><button
+                        class='btn btn-block btn-outline-danger'>Order</button></a>
+            </div>
+            <div
+                class="col-lg-3 col-xl-3 col-md-5 col-sm-5 card card-body shadow-lg mx-auto mt-md-5 margin-top-sm-5 mt-sm-5 mt-lg-0">
+                <div class="">
+                    <img src="assets/images/amala2.jpeg" alt="amala" srcset="" class='card-img' height="180">
+                </div>
+                <div class="card-title">
+                    <p class="d-flex justify-content-between ">
+                        <b class="d-flex align-items-center"> <i class='lead fa fa-map-marker text-danger'> </i><span
+                                class="text-hidden">_ </span> Landmark</b>
+                        <strong class="shadow-sm bg-white px-1 rounded-left" style="position:relative; bottom:1.3em;">
+                            <i class="fa fa-truck text-danger "></i> 15mins
+                        </strong>
+                    </p>
+                    <span>
+                        <i class='fa fa-star lead text-danger'></i>
+                        <i class='fa fa-star lead text-danger'></i>
+                        <i class='fa fa-star lead text-danger'></i>
+                        <i class='fa fa-star lead text-danger'></i>
+                        <i class='fa fa-star-o text-danger'></i>
+                        <b>Rated 4.0</b> </span>
+                </div>
+                <div class="card-subtitle">
+                    <p class='text-secondary description '><i class="fa fa-cutlery text-danger"
+                            style='font-size: 18px'></i>
+                        Rice, Beans, Plantain, Amala, Fufu, Gbegiri, Ewedu, Vegetable, Goat Meat, Cow meat...</p>
+                </div>
+                <a href="location/landmark.html" class="nav-link"><button
+                        class='btn btn-block btn-outline-danger'>Order</button></a>
+            </div>
+            <div 
+                class="col-lg-4 col-xl-4 col-md-5 col-sm-5 card card-body shadow-lg mx-auto mt-sm-5 margin-top-sm-5 mt-xl-5 mt-lg-5">
+                <div class="">
+                    <img src="assets/images/coconut_rice.jpeg" alt="amala" srcset="" class='card-img' height="180">
+                </div>
+                <div class="card-title">
+                    <p class="d-flex justify-content-between ">
+                        <b class="d-flex align-items-center"> <i class='fa fa-map-marker text-danger lead'> </i><span
+                                class="text-hidden">_ </span> Law School</b>
+                        <strong class="shadow-sm bg-white px-1 rounded-left" style="position:relative; bottom:1.3em;">
+                            <i class="fa fa-truck text-danger "></i> 1hour
+                        </strong>
+                    </p>
+                    <span>
+                        <i class='fa fa-star text-danger lead'></i>
+                        <i class='fa fa-star text-danger lead'></i>
+                        <i class='fa fa-star text-danger lead'></i>
+                        <i class='fa fa-star text-danger lead'></i>
+                        <i class='fa fa-star text-danger lead'></i> <b>Rated 5.0</b>
+                    </span>
+                </div>
+                <div class="card-subtitle">
+                    <p class='text-secondary description'><i class="fa fa-cutlery text-danger"
+                            style='font-size: 18px'></i>
+                        Rice, Beans, Salad, Moin Moin, Plantain, Semo, Wheat, Amala, Fufu, Afang, Oha, Egusi...</p>
+                </div>
+                <a class='nav-link' href='location/law-school.html'><button
+                        class='btn btn-block btn-outline-danger'>Order</button></a>
             </div>
         </div>
-
-        <!-- later work -->
-        <!-- <div class="bg-inner">
-            <div class="contain">
-                <div class="row">
-                    <div class="col11">
-                        <div class="container">
-                            <div class="display-4 text-center text-primary text-uppercase ">
-                                <p class="mt-5 pt-5"> <i class="fa fa-quote-left"></i> Nothing is better than the power of protein <i class="fa fa-quote-right"></i></p>
+    </div> -->
+    <main class="mt-5 container">
+        <div class="mx-auto">
+            <div class="text-center">
+                <h2 class="text-s-20">We are what you need for your career</h2>
+                <p class="lead">Our loans are popular to be effective in terms of growth of careers, educations,
+                    businesses
+                    and more.</p>
+            </div>
+        </div>
+        <div class="mx-auto text-center mt-5">
+            <h4 class="text-secondary d-inline-block" style="border-bottom: 3px solid #dc3545"> We Cover </h4>
+        </div>
+        <div class="row mt-5 justify-content-around mx-2">
+            <div class="card col-lg-3 col-md- mx-aut col-sm-8 mb-5 text-center shadow">
+                <div class="card-body">
+                    <div class="card-title">
+                        <i class="fa fa-university fa-5x text-danger"></i>
+                    </div>
+                    <h5 class="card-text text-secondary">Up to 1,000 financed schools</h5>
+                </div>
+            </div>
+            <div class="card col-lg-3 col-sm-5 text-center mb-5 shadow">
+                <div class="card-body">
+                    <div class="card-title">
+                        <i class="fa fa-bar-chart fa-5x text-danger"></i>
+                    </div>
+                    <h5 class="card-text text-secondary">About 5,000 financed businesses </h5>
+                </div>
+            </div>
+            <div class="card col-lg-3 col-sm-5 text-center mb-5 shadow ">
+                <div class="card-body">
+                    <div class="card-title">
+                        <i class="fa fa-users fa-5x text-danger"></i>
+                    </div>
+                    <h5 class="card-text text-secondary">Over 11,000 customers</h5>
+                </div>
+            </div>
+            <section class="mt-5 text-center" id="setapart">
+                <hr>
+                <h2>What set us apart from others</h2>
+                <div class="row justify-content-around mt-5">
+                    <div class=" col-lg-3 col-md- mx col-sm-6 mb-5 text-center">
+                        <div class="round">1</div>
+                        <p class="text-secondary mt-2">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui fugiat, tenetur veniam aut ex
+                            possimus?
+                        </p>
+                    </div>
+                    <div class=" col-lg-3 col-md- mx col-sm-6 mb-5 text-center">
+                        <div class="round">2</div>
+                        <p class="text-secondary mt-2">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui fugiat, tenetur veniam aut ex
+                            possimus?
+                        </p>
+                    </div>
+                    <div class="col-lg-3 col-md- mx col-sm-6 mb-5 text-center">
+                        <div class="round">3</div>
+                        <p class="text-secondary mt-2">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui fugiat, tenetur veniam aut ex
+                            possimus?
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!-- Carousel Slider -->
+            <br>
+            <section class="d-flex align-items-center justify-content-center mb-5 mx-auto " id="carousel">
+                <div class="controls">
+                    <i class="fa fa-angle-left text-30"></i>
+                </div>
+                <div class="row justify-content-around  mx-auto text-center">
+                    <div id='img1' class='img'>
+                        <div class="img-holder container">
+                            <div class="header text-left">
+                                <img src="assets/images/people/8.jpg" alt="">
+                                <span>
+                                    <strong>Remilekun Elijah</strong>
+                                    <p class="mb-0">Web Developer</p>
+                                    <span class="text-secondary">@Hotels NG </span>
+                                </span>
+                            </div>
+                            <hr class="w-75 mx-auto ">
+                            <div>
+                                <i class="fa fa-quote-left text-danger"></i>
+                                <p class="d-inline text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit.
+                                    Fugiat saepe ex praesentium.</p>
+                                <i class="fa fa-quote-right text-danger"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="" id='img2'>
+                        <div class="img-holder container">
+                            <div class="header">
+                                <img src="assets/images/people/1.jpeg" alt="">
+                                <span>
+                                    <strong>Lara Gold</strong>
+                                    <p class="mb-0">Fashion Designer</p>
+                                    <span class="text-secondary">@Lara Wears </span>
+                                </span>
+                            </div>
+                            <hr class="w-75 mx-auto ">
+                            <div> <i class="fa fa-quote-left text-danger"></i>
+                                <p class="d-inline text-secondary">Lorem ipsum, dolor sit amet consectetur adipisicing
+                                    elit.
+                                    Sit, voluptate dolor!</p>
+                                <i class="fa fa-quote-right text-danger"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="" id='img3'>
+                        <div class="img-holder container">
+                            <div class="header">
+                                <img src="assets/images/people/7.jpg" alt="">
+                                <span>
+                                    <strong>Favour Alex</strong>
+                                    <p class="mb-0">Tech Enthusiast</p>
+                                    <span class="text-secondary">@Yaba Tech </span>
+                                </span>
+                            </div>
+                            <hr class="w-75 mx-auto ">
+                            <div>
+                                <i class="fa fa-quote-left text-danger"></i>
+                                <p class="d-inline text-secondary"> Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit.
+                                    Tempore cumque quia aut incidunt?</p>
+                                <i class="fa fa-quote-right text-danger    "></i>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div> -->
-</div>    
-
-
-
-    
-    <footer class="bg-dark pt-3 text-center" >
-
-        <div class="container ">
-            <div class="row ">
-                <div class="col-sm-6">
-                    <h3 class="text-light">
-                        <i class="fa fa-map-marker"></i> Locations
-                    </h3>
-                    <hr style="margin: 0px 170px; " class="pb-3">
-                    <div class="location">
-                        <p class="text-light pl-3">
-                            <a href="law-school.html">Law School</a>
-                        </p>
-                        <p class="text-light pl-3">
-                            <a href="landmark.html">Landmark</a>
-                        </p>
-                        <p class="text-light pl-3">
-                            <a href="bolly.html">Bolly</a>
-                        </p>
-                    </div>
+                <div class="controls">
+                    <i class="fa fa-angle-right text-30"></i>
                 </div>
-
-                <div class="col-sm-6">
-                        <h3 class="text-light pb-0">
-                         <i class="fa fa-address-book-o text-light"></i> Contact
-                        </h3>
-                        <hr style="margin: 0px 170px; " class="pb-3">
-                        <div style="color:#aba">
-                        <p class=" pl-3">
-                           <i class="fa fa-address-card"></i> No <sup>106</sup> Ajose Adeogun VI, Lagos NG
-                        </p>
-                        <p class="">
-                           <i class="fa fa-envelope-o mb-4"></i>  Remilekuneiljah21997@gmail.com
-                        </p>
-                        
-                        <p class="phone">
-                                <i class="fa fa-phone col-lg-offset-2"></i>  0903251166
-                            </p>
-                    </div>
-                </div>
-            </div>
-
-                <div class="container mt-5">
-                    <p class="text-light"> Coded with <i class="fa fa-html5"></i> and <i class="fa fa-coffee"></i> by <a href="github.com/Remilekun-Elijah" class="text-center">Remilekun Elijah.</a></p>
-                </div>
-                <nav style="font-size: 30px" class="mt-1">
-                    <a href="facebook.com/remilekun.elijah.jnr.97" class=" "><i class="fa fa-facebook-square "></i></a>
-                    <a href="twitterk.com/RemilekunElijah" class=" "><i class="fa fa-twitter-square "></i></a>
-                    <a href="instagram.com/Remilekun-Elijah-jnr" class=" "><i class="fa fa-instagram "></i></a>
-                    <a href="linkedin.com/Remilekun-Elijah" class=" "><i class="fa fa-linkedin-square "></i></a>
-                    <a href="github.com/Remilekun-Elijah" class=" "><i class="fa fa-github-square"></i></a>
-                    <a href="pinterest.com/remilekun.elijah.jnr.97" class=" "><i class="fa fa-pinterest-square "></i></a>
-                    <a href="google.com/Remilekun%20Elijah" class=" "><i class="fa fa-google-plus-square "></i></a>
-                    <a href="flickr.com/remilekun%20elijah" class=" "><i class="fa fa-flickr "></i></a>
-                </nav>    
+            </section>
         </div>
+    </main>
+    <div id="screen"><span class="closeRegModalBtn dismissCloseRegModalBtn">&times;</span>
+    </div>
+    <!-- <div id="sc"><span class="closeRegModalBtn">&times;</span></div> -->
+    <script src="assets/codes/js/navbar.js"></script>
+    <script src="assets/codes/js/footer.js"></script>
+    <script src="assets/codes/js/user.js"></script>
 
-    </footer>
-    <footer style="background: #ccc ; font-size: 20px;">
-        <marquee behavior="none" direction="left" class="text-secondary p-1">&copy; 2018 | All rights reserved</marquee>
-    </footer>
-  <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>  
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#reserved-urls -->
+    <!-- Initialize Firebase -->
+    <script src="/__/firebase/init.js"></script>
+    <!-- Previously loaded Firebase SDKs -->
 
-  <!-- JavaScript cdn-->
-  <!-- <script type="text/javascript" src="../library/jquery-3.3.1.min.js"></script>
-  
-  <script type="text/javascript" src="../library/popper.min.js"></script>
+    <!-- Add the Performance Monitoring library -->
+    <script src="/__/firebase/6.2.3/firebase-performance.js"></script>
+    <!-- Initialize Performance Monitoring and get a reference to the service -->
+    <script>
+        var perf = firebase.performance();
+        // ...
+    </script>
+    <script>
+        // The perfMetrics object is created by the code that goes in <head>.
+        perfMetrics.onFirstInputDelay(function (delay, evt) {
+            ga('send', 'event', {
+                eventCategory: 'Perf Metrics',
+                eventAction: 'first-input-delay',
+                eventLabel: evt.type,
+                // Event values must be an integer.
+                eventValue: Math.round(delay),
+                // Exclude this event from bounce rate calculations.
+                nonInteraction: true,
+            });
+            console.log(evt.type);
+            console.log(delay);
+        });
+    </script>
+    <script src="assets/library/popper.min.js"></script>
+    <script src="assets/library/jquery-3.3.1.min.js"></script>
+    <script src="assets/library/bootstrap-4.min.js"></script>
+    <!-- <script src="assets/codes/js/classSwitcher.js"></script> -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let scrollEv = function () {
+                let hash = document.getElementById('regHere');
+                $('html').animate({
+                    scrollTop: $(hash).offset().top
+                }, 600, function () {
+                    $('#signUpName').focus()
+                })
+            };
+            if (localStorage.getItem('user') === null) {
+                $('#login').on('click', e => {
+                    e.preventDefault();
+                    signUpPopUp();
+                });
+            };
+            function verifyForm(name, email, number, submit, callback) { };
+            function signUpPopUp() {
+                document.querySelector('body').className = '';
+                // ####### SCROLL PAGE TO REGISTER FORM 
+                scrollEv();
+                let r = document.querySelector('#regform')
 
-  <script type="text/javascript" src="../library/bootstrap-4.min.js"></script>
-  -->    
-
-
-  <script type="text/javascript" src="app.js"></script>
-<script> window.onload = function(){
-    alert('Please be aware, this website is still under construction, visiting this url right now is basically for development purpose');
-    console.clear();
-}</script>
+                setTimeout(() => {
+                    $('body').addClass('hideScroll');
+                    $('#screen').addClass('screen');
+                }, 600);
+                setTimeout(() => {
+                    $(r).addClass('regform');
+                    if (window.innerWidth < 330) {
+                        // $(c).css('top', `${window.pageYOffset+15}px`);
+                        $('.closeRegModalBtn').css('top', `${window.pageYOffset}px`);
+                        if (window.innerHeight <= 485) { }
+                    } else $(c).css('top', `${window.pageYOffset + (42 * 2)}px`);
+                }, 1100);
+                setTimeout(() => {
+                    $(c).addClass('scaleCloseRegModalbtn');
+                    classSwitcher(c, 'dismissCloseRegModalBtn', 'scaleCloseRegModalbtn', 'no')
+                }, 1600);
+                //######## CLOSE HOME MODAL 
+                $(c).on('click', e => {
+                    classSwitcher(d, 'screen', 'closeScreen');
+                    classSwitcher(r, 'regform', 'closeRegForm');
+                    classSwitcher('body', 'hideScroll', 'showScroll');
+                    classSwitcher(c, 'scaleCloseRegModalbtn', 'dismissCloseRegModalBtn', 'yes')
+                });
+            };
+            $('#info1').text(` WinWidth: ${window.innerWidth} `);
+            $('#info2').text(` WinHeight: ${window.innerHeight} `);
+            $('#info3').text(` WinOutWidth: ${window.outerWidth} `)
+            $('#info4').text(` WinOutHeight: ${window.outerHeight} `)
+        });
+        // ########## Image Carousel
+        // $('.img-holder').css('color', 'red');
+        let img1 = document.querySelector('#img1'),
+            img2 = document.querySelector('#img2'),
+            img3 = document.querySelector('#img3')
+        left = $('.controls .fa-angle-left');
+        right = $('.controls .fa-angle-right');
+        let current = 0;
+        img1.style.display = 'block';
+        function startSlider() {
+            current++;
+            console.log(current);
+            if (current == 1) {
+                console.log('one');
+                img1.style.display = 'none';
+                img2.style.display = 'block';
+            } else if (current == 2) {
+                console.log('two');
+                img2.style.display = 'none';
+                img3.style.display = 'block';
+            } else if (current == 3) {
+                console.log('three');
+                img3.style.display = 'none';
+                img1.style.display = 'block';
+                current = 0;
+            }
+        };
+        function moveLeft() {
+            if (current -= 0) current--;
+            else current = 3;
+            console.log(current);
+            if (current == 1) {
+                console.log('one');
+                img1.style.display = 'none';
+                img2.style.display = 'block';
+            } else if (current == 2) {
+                console.log('two');
+                img2.style.display = 'none';
+                img3.style.display = 'block';
+            } else if (current == 3) {
+                console.log('three');
+                img3.style.display = 'none';
+                img1.style.display = 'block';
+                current = 0;
+            }
+        }
+        setInterval(startSlider, 3000);
+        left.on('click', () => {
+            moveLeft();
+        });
+        right.on('click', () => {
+            startSlider();
+        });
+    </script>
 </body>
+
 </html>

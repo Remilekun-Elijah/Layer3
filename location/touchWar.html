@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Touch War</title>
+		<style>
+			.container {
+				padding: 7px 20px;
+			}
+
+			#list-wrapper {
+				width: 50%;
+				border: 2px solid grey;
+				padding-left: 10px;
+			}
+
+			.list-item {
+				display: block;
+				margin-bottom: 15px;
+				font-size: 20px;
+				width: 95%;
+				transition: all 200ms;
+				padding: 2% 3%;
+				background: linear-gradient(to left, #fcc, #ccf);
+			}
+
+			.output {
+				min-width: 300px;
+				width: 50%;
+				height: 400px;
+				background: linear-gradient(to bottom, #aaa, #f4f4f4)
+			}
+
+			#first {
+				background: red;
+				width: 95%;
+				padding: 0px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="list-container">
+				<div id="list-wrapper">
+					<p id="first"> <span class="list-item" id="one">List Item One</span></p>
+					<p id="first"><span class="list-item" id="two">List Item Two</span></p>
+					<p id="first"><span class="list-item" id="three">List Item Three</span></p>
+				</div>
+			</div>
+
+			<div class="output">
+
+				<p id="start" style="color:tomato"></p>
+				<p id="move" style="color: tomato"></p>
+				<p id="end" style="color:tomato"></p>
+			</div>
+		</div>
+
+		<script src="lib/library/jquery-3.3.1.min.js"></script>
+		<script>
+			const output = document.querySelector('.output');
+			let start = 0,
+				move;
+
+			document.addEventListener('DOMContentLoaded', () => {
+				let ul = $('.list-item');
+				ul.on('touchstart', e => {
+					$('#start').html( //html
+						`<br />Event: <span style='color:blue'>${e.type}</span><br />ClientX: <span style='color:red'>${Math.round(e.touches[0].clientX)}</span>
+<br>ClientY: <span style='color:red'>${Math.round(e.touches[0].clientY)}</span><br />TimeStamp: <span style='color:red'>${Math.round(e.timeStamp)}</span>
+<br />`
+					);
+				//	page = Math.round(e.touches[0].clientX) - Math.round(e.touches[0].clientX);
+					console.log(e.timeStamp);
+					start = Math.round(e.touches[0].pageX);
+
+
+				})
+
+				ul.on('touchmove', e => {
+					$('#move').html( //html
+						`<br />Event: <span style='color:blue'>${e.type}</span><br />ClientX: <span style='color:red'>${Math.round(e.touches[0].clientX)}</span>
+						<br>ClientY: <span style='color:red'>${Math.round(e.touches[0].clientY)}</span> <br /> TimeStamp: <span style='color:black'>${Math.round(e.timeStamp)}</span> <br/>`
+					);
+					move = Math.round(e.touches[0].pageX);
+					e.target.style.marginLeft = move - start + 'px';
+
+					// console.log(e.target);
+if (move - start >= 150 || start - move >= 150) {
+
+e.target.parentElement.remove()
+} else {
+// e.target.style.marginLeft = 0;
+}
+				})
+
+				ul.on('touchend', e => {
+					$('#end').html( //html
+						`<br />Event: <span style='color:blue'>${e.type}</span><br />TimeStamp: <span style='color:black'>${Math.round(e.timeStamp)}</span>`
+					);
+e.target.style.marginLeft = 0;
+// debugger;
+					move=0;
+					start=0;
+					console.log(e.touches);
+				})
+
+				// ul.on('touchcancel', () => {
+				// 	e.target.style.marginLeft = start + 'px';
+				// 	console.log(e.type)
+				// })
+
+			});
+		</script>
+	</body>
+
+</html>

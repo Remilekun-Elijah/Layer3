@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css?family=Old+Standard+TT');
+@import url('https://fonts.googleapis.com/css?family=Anton');
+
+#food-desc,
+#prepaid p,
+.white-text,
+.bottom {
+  margin-top: 10px;
+  font-family: 'Old Standard TT', serif;
+  font-size: 18px;
+  color: hsl(3, 3%, 35%);
+}
+
+.nav .nav-link {
+  color: white !important
+}
+
+.navbar-brand {
+  font-family: 'Anton', sans-serif;
+}
+
+.navbar {
+  opacity: 0.97;
+  border-bottom: 3px solid #dc3545 !important;
+}
+
+#home {
+  width: 100%;
+  min-height: 700px;
+  max-height: 1500px;
+  background: url(../../images/Owerri-mall-store.jpg) no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  margin-bottom: -30px;
+}
+
+.modal {
+  overflow-y: scroll !important;
+}
+
+.dropdown-menu {
+  margin-right: 100px !important
+}
+
+.dark-overlay {
+  width: 100%;
+  min-height: 700px;
+  max-height: 1500px;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  margin-bottom: -60px;
+}
+
+
+#home-inner {
+  padding-top: 100px;
+}
+
+
+.white-text,
+#prepaid textarea {
+  color: #fff !important;
+}
+
+.dropdown-item:last-child:hover {
+  background: #dc3545 !important;
+  color: white
+}
+
+.mail:hover {
+  text-decoration: none;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+.description {
+  padding: 5px 10px;
+  font-size: 1rem !important;
+}
+
+.card {
+  border-radius: 0px !important;
+  transition: all .3s ease-in-out;
+}
+
+.card:hover {
+  transition: all .3s ease-in-out;
+  /* transform: translate3D(0px, -5px, 1px); */
+}
+
+
+.btn-outline-secondary {
+  width: 100%;
+  text-align: center;
+}
+
+.custom-hr {
+  border-top: 2px double #dc3545;
+}
+
+.footer {
+  clear: both !important;
+}
+
+.sticky-top {
+  top: 3.8em !important;
+  width: 30%;
+}
+
+.container-fluid {
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+}
+
+.lawschool-header {
+  background: #fff;
+  color: #fff;
+  width: 100% !important;
+}
+
+body {
+  background: #f4f4f4 !important;
+  overflow-x: hidden;
+}
+
+/* mobile cart height */
+.collapseHeight {
+  height: 100%
+}
+
+#cart-body {
+
+  overflow-x: hidden !important;
+  margin-bottom: 0 !important;
+}
+
+#cart-wrapper:hover {
+  cursor: -webkit-grab;
+}
+
+.shake {
+  animation-iteration-count: infinite;
+}
+
+p {
+  font: thin 14px sans-serif;
+}
+
+#unregister:hover {
+  color: white !important;
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* CHECKOUT */
+form[name='prepaid'] {
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  background: #eee;
+}
+
+#checkoutModal {
+  padding: 0 !important;
+}
+
+.bigCartWrapper {
+  transition: all 300ms
+}
+
+@media (max-width: 767px){
+  .description{
+    font-size: 15px !important
+  }
+}
+@media(max-width: 991px){
+  .margin-top-sm-5{
+    margin-top: 3rem !important
+
+  }
+}
+@media(max-width: 575px){
+  .home-location{
+    margin: 0 35px !important;
+  }
+}
+@media(max-width: 400px){
+  .home-location{
+    margin: 0 20px !important;
+  }
+}
+
+.text-hidden{
+  visibility: hidden;
+}
+
+#alert{
+  position: fixed;
+  right: -100%;
+  bottom: 100px;
+  z-index: 9999;
+  transition: all .3s;
+}
+#remove-alert:hover{
+  color:#dc3545;
+  cursor: pointer
+}
