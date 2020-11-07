@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded',()=>{
           <span aria-hidden="true" class="text-danger">&times;</span>
         </button>
 
-
       </div>
       <div class="modal-body pt-0">
         <div class="pt-2">
@@ -32,7 +31,7 @@ document.addEventListener('DOMContentLoaded',()=>{
       </div>
       <div class="modal-footer">
         <button id='add-to-cart' type="button" class="btn  btn-outline-secondary" data-dismiss="modal">Add
-          to Basket
+          to Basket for   
           <strong id='' class="fa text-danger font-weight-bold food-amount disabled"></strong>
         </button>
 

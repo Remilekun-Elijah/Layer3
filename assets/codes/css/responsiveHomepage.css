@@ -167,7 +167,7 @@
   border-radius: 100%;
   font-size: 80px;
   width: 40%;
-  height: 60%;
+  max-height: 60%;
   background: #eee;
   color: #dc3545;
   text-shadow: 5px 5px 3px #bbb;
@@ -203,7 +203,10 @@ position: absolute;
 .img-holder .header img {
   width: 100px;
   height: 100px;
-  border-radius: 50px;
+  /* border-radius: 50px; */
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  border-right: 5px solid #333;
   margin-right: 10px
 }
 .img-holder{
