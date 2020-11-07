@@ -1,4 +1,3 @@
-
 class Form {
   constructor(formName) {
     this._formName = formName;
@@ -50,17 +49,25 @@ class Form {
     this.office.addEventListener('keyup', e => check(e, e.target.value.length > 3));
     this.street.addEventListener('change', e => console.log(e.target.value, e.returnValue));
     const that = this;
-    let int = setInterval(function () {
-      // let e = { e: that._street }
-      if (that.name.parentElement.lastElementChild.firstElementChild.classList.contains('fa-check') && that.number.parentElement.lastElementChild.firstElementChild.classList.contains('fa-check') && that.office.parentElement.lastElementChild.firstElementChild.classList.contains('fa-check') && that.street.value !== that.street[0].value) {
+    try {
+      setInterval(function () {
+        // let e = { e: that._street }
+        if (that.name.parentElement.lastElementChild.firstElementChild.classList.contains('fa-check') && that.number.parentElement.lastElementChild.firstElementChild.classList.contains('fa-check') && that.office.parentElement.lastElementChild.firstElementChild.classList.contains('fa-check') && that.street.value !== that.street[0].value) {
 
-        that.form.submit.disabled = false;
-        that.form.submit.setAttribute("data-target", "#signingUp")
-        console.log('Form is all setted up and ready to submit');
+          that.form.submit.disabled = false;
+          that.form.submit.setAttribute("data-target", "#signingUp")
+          console.log('Form is all setted up and ready to submit');
 
-      } else that.form.submit.disabled = true;
-    }, 1000);
-    return { submit: this.form.addEventListener('submit', e => { this.submit(e); clearInterval(int, 100) }) }
+        } else that.form.submit.disabled = true;
+      }, 1000);
+
+    }
+    catch (e) {
+      alert(e)
+    }
+    finally {
+      return { submit: this.form.addEventListener('submit', e => { this.submit(e); }) }
+    }
   }
 
   submit(e) {
@@ -102,7 +109,7 @@ class Form {
 const signup = new Form('#signUp');
 signup.verify().submit()
 
-
+alert('000000');
 document.addEventListener('DOMContentLoaded', function () {
   const imgP = document.querySelector('.img1');
 
@@ -315,7 +322,7 @@ document.addEventListener('DOMContentLoaded', function () {
   document.addEventListener('click', e => {
     if (e.target != document.querySelector('.nav') && e.target != document.querySelector('nav .container') && e.target != document.querySelector('.navbar')) {
       $('.navbar .collapse').collapse('hide');
-      console.log(1++)
+      console.log(1)
     }
   });
 });
