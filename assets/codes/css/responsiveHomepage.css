@@ -13,19 +13,34 @@
     font-size: 15px !important
   }
 
-  .regform {
-    transform: translate(-50%, 40%);
+  #regform {
+    /* transform: translate(-50%, 40%); */
+    /* margin-right: auto; */
+    /* margin-left: auto; */
+  }
+
+  /* HEADER */
+  header #appetizer {
+    margin-bottom: 5em;
+  }
+  .webkit {
+    display: -webkit-box !important;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-pack: center !important
   }
 }
 
 
 @media (max-width: 767px) {
   .description {
-    font-size: 15px !important
+    font-size: 15px !important;
+    
   }
 
-  .regform {
-    transform: translate(-20vw, 25vh) !important;
+  #regform {
+    /* transform: translate(-20vw, 25vh) !important; */
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 
   /* *** IMAGE SLIDER **** */

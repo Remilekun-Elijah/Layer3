@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-  
+
   // window.setInterval(function(){alert(+1)}, 500);
   "use strict";
   document.getElementById('cartCheckout').disabled = true;
@@ -7,60 +7,60 @@ document.addEventListener('DOMContentLoaded', function () {
   const xhr = new XMLHttpRequest();
   xhr.open("GET", "../assets/codes/js/food.json", true);
 
-  function getFile(url,locationName,location,locationFood) {
+  function getFile(url, locationName, location, locationFood) {
     if (document.location.href.includes(url)) {
       document.getElementById('location-name').innerText = locationName;
       document.querySelector('ol .active').innerText = locationName;
       document.getElementById('location').innerText = location;
 
       locationFood.food.forEach(place => {
-          displayJson(place.name, place.img, place.price, place.desc, place.min);
+        displayJson(place.name, place.img, place.price, place.desc, place.min);
       });
-      if( $('.breadcrumb .active').text().includes('Moshood Olugbani')){
-        $('.breadcrumb .active').text($('.breadcrumb .active').text().replace('Olugbani',''))
+      if ($('.breadcrumb .active').text().includes('Moshood Olugbani')) {
+        $('.breadcrumb .active').text($('.breadcrumb .active').text().replace('Olugbani', ''))
       }
     }
   }
 
   xhr.onreadystatechange = function () {
     if (this.status == 200 && this.readyState == 4) {
-        
+
       // $("#cart").show('fast');
       $("#cart").removeClass('d-none');
       $("#cart").addClass('d-block');
       $("#cart").removeClass('d-block');
       $("#infoMsg").addClass('d-none');
-      
-      console.log('success', this.status,this.statusText, this.readyState, 'done: '+ this.DONE);
+
+      console.log('success', this.status, this.statusText, this.readyState, 'done: ' + this.DONE);
       let res = JSON.parse(this.response);
-      getFile('law-school',res.location[0].lawschool.name,res.location[0].lawschool.location,res.location[0].lawschool);
+      getFile('law-school', res.location[0].lawschool.name, res.location[0].lawschool.location, res.location[0].lawschool);
 
-      getFile('landmark',res.location[1].landmark.name,res.location[1].landmark.location,res.location[1].landmark);
+      getFile('landmark', res.location[1].landmark.name, res.location[1].landmark.location, res.location[1].landmark);
 
-      getFile('jide-oki',res.location[2].jideoki.name,res.location[2].jideoki.location,res.location[2].jideoki);
-      getFile('moshood',res.location[3].moshood.name,res.location[3].moshood.location,res.location[3].moshood);
-      
+      getFile('jide-oki', res.location[2].jideoki.name, res.location[2].jideoki.location, res.location[2].jideoki);
+      getFile('moshood', res.location[3].moshood.name, res.location[3].moshood.location, res.location[3].moshood);
+
     }
-      
-    
+
+
   }
-xhr.onprogress=()=>{
-        console.log('loading', xhr.status, xhr.statusText, xhr.readyState);
-        $('#cart').addClass('d-none');
-        // $('#cart').hide();
-        $('#infoMsg').text("Loading items...");
-        $('#infoMsg').addClass('text-secondary');
-      
-      };
-      xhr.onerror = () => {
-        console.log('error', xhr.status,xhr.readyState,this.statusText);
-        $('#infoMsg').text("Looks like something went wrong...");
-        $('#infoMsg').addClass('text-danger');
-        $('#cart').hide();
-        $("#reload").removeClass('d-none');
-        $("#reload").addClass('d-inline');
-        $("#reload").on('click',()=>document.location.reload());
-      };
+  xhr.onprogress = () => {
+    console.log('loading', xhr.status, xhr.statusText, xhr.readyState);
+    $('#cart').addClass('d-none');
+    // $('#cart').hide();
+    $('#infoMsg').text("Loading items...");
+    $('#infoMsg').addClass('text-secondary');
+
+  };
+  xhr.onerror = () => {
+    console.log('error', xhr.status, xhr.readyState, this.statusText);
+    $('#infoMsg').text("Looks like something went wrong...");
+    $('#infoMsg').addClass('text-danger');
+    $('#cart').hide();
+    $("#reload").removeClass('d-none');
+    $("#reload").addClass('d-inline');
+    $("#reload").on('click', () => document.location.reload());
+  };
   xhr.send();
 
   function displayJson(name, imgSrc, price, desc, min) {
@@ -109,7 +109,7 @@ xhr.onprogress=()=>{
     btn.setAttribute("data-toggle", "modal");
     if (price == 0) btn.innerText = `Free`;
     else {
-      btn.innerText = `Buy ₦${price}`;
+      btn.innerText = `Buy for ₦${price}`;
     }
 
     // append button to card footer div
@@ -126,42 +126,34 @@ xhr.onprogress=()=>{
   }
 
   setInterval(() => {
-    if(document.querySelector('.tooltip')){
-  
-      $('.tooltip').remove();
-    }
+    if (document.querySelector('.tooltip')) $('.tooltip').remove()
   }, 5000)
 
   function cartResponsiveness() {
 
     const cart = document.querySelector('#cart');
     const cartBody = document.querySelector('#cart-body');
-    try{
-      document.querySelectorAll("#render-here h3").forEach(h3=>{
-        if(h3.textContent == 'Beans') {
-          document.querySelectorAll('#cart-inner-body #food-name').forEach(food=> {
-            if(!food.textContent.includes('Rice')){
-            // console.log('NO RICE!!!');
-            h3.parentElement.parentElement.parentElement.lastElementChild.firstElementChild.textContent = 'Buy ₦100'  
-            } else if(food.textContent.includes('Rice')){
+    try {
+      document.querySelectorAll("#render-here h3").forEach(h3 => {
+        if (h3.textContent == 'Beans') {
+          document.querySelectorAll('#cart-inner-body #food-name').forEach(food => {
+            if (!food.textContent.includes('Rice')) {
+              // console.log('NO RICE!!!');
+              h3.parentElement.parentElement.parentElement.lastElementChild.firstElementChild.textContent = 'Buy for ₦100'
+            } else if (food.textContent.includes('Rice')) {
               // console.log('RICE!!');
-              h3.parentElement.parentElement.parentElement.lastElementChild.firstElementChild.textContent = 'Buy ₦50';
-              if(food.textContent == 'Beans'){
-                console.log(food);
-                
-              }
-            } 
+              h3.parentElement.parentElement.parentElement.lastElementChild.firstElementChild.textContent = 'Buy for ₦50';
+              if (food.textContent == 'Beans') console.log(food);
+            }
           });
-          if(document.querySelector('#cart-inner-body #food-name') == undefined)h3.parentElement.parentElement.parentElement.lastElementChild.firstElementChild.textContent = 'Buy ₦100'
-        
+          if (document.querySelector('#cart-inner-body #food-name') == undefined) h3.parentElement.parentElement.parentElement.lastElementChild.firstElementChild.textContent = 'Buy for ₦100'
         }
       });
 
-      
-  }
-  catch(err){
-    // console.log(err)
-  }
+    }
+    catch (err) {
+      console.log(err)
+    }
 
     if (window.innerWidth < 767) {
       document.querySelectorAll('.rounded').forEach(r => r.width = '110');
@@ -190,7 +182,7 @@ xhr.onprogress=()=>{
       document.querySelectorAll('#buy').forEach(btn => btn.classList.add('btn-md'));
 
     }
-  
+
 
     if (window.innerWidth > 768) {
       /***** DRAGGABLE CART DIV******/
@@ -200,7 +192,7 @@ xhr.onprogress=()=>{
         wrapper.id = index + 'index';
 
         wrapper.addEventListener("dragstart", e => {
-
+          
           if (e.target.className.includes('bigCartWrapper')) {
             e.target.classList.add('animated');
             e.target.classList.add('shake');
@@ -222,17 +214,15 @@ xhr.onprogress=()=>{
 
       // replacing item position on d cart > cart body
       document.getElementById('cart-body').addEventListener('drop', e => {
-
         if (e.target.id == 'cart-body') {
           e.preventDefault();
           e.target.appendChild(document.getElementById(e.dataTransfer.getData('src')));
         }
-
       });
       document.getElementById('cart-body').addEventListener('dragover', e => e.preventDefault());
 
       // deleting item > Trash Can
-     document.getElementById('trash').addEventListener('dragover', e => {
+      document.getElementById('trash').addEventListener('dragover', e => {
         e.preventDefault();
         e.target.style.fontSize = '25px';
         e.target.style.opacity = '1';
@@ -243,8 +233,8 @@ xhr.onprogress=()=>{
         e.preventDefault();
         $('.tooltip').remove();
         document.getElementById(e.dataTransfer.getData('src')).remove();
-        $("#alert").css("right","10%");
-        setTimeout(()=>$("#alert").css("right","-30%"), 3000);
+        $("#alert").css("right", "10%");
+        setTimeout(() => $("#alert").css("right", "-30%"), 3000);
         if (document.getElementById('cart-inner-body').childElementCount == 1) {
 
           document.getElementById('total-panel').classList.replace('d-block', 'd-none');
@@ -282,7 +272,7 @@ xhr.onprogress=()=>{
   window.setInterval(cartResponsiveness, 500);
 
   // price modal minus button monitor
-  function foodAmountValidator (callback) {
+  function foodAmountValidator(callback) {
     let per = document.querySelector('.per'),
       minus = document.querySelector('#priceModal #modal-minus');
     if (parseInt(per.textContent) < 2) {
@@ -308,8 +298,8 @@ xhr.onprogress=()=>{
         foodDesc = e.target.parentElement.parentElement.firstElementChild.children[1].textContent,
         foodUrl = e.target.parentElement.parentElement.firstElementChild.firstElementChild.firstElementChild.src,
         // remove unwanted string from food price
-        foodPrice = e.target.parentElement.parentElement.lastElementChild.firstElementChild.innerText.replace(`Buy ₦`, '');
-      
+        foodPrice = e.target.parentElement.parentElement.lastElementChild.firstElementChild.innerText.replace(`Buy for ₦`, '');
+
       document.querySelector('#priceModal .food-amount').setAttribute('id', foodUrl);
       // set price modal amount number to number
       document.querySelector('.per').textContent = e.target.parentElement.parentElement.lastElementChild.firstElementChild.value;
@@ -427,33 +417,33 @@ xhr.onprogress=()=>{
 
 
     bigCartWrapper.className = 'bigCartWrapper';
-    
-    
-  
+
+
+
     setTimeout(() => $('[data-toggle="tooltip"]').tooltip(), 100);
 
     if (window.innerWidth > 1024) {
-        // setTimeout(() => $('[data-toggle="tooltip"]').tooltip(), 100);
+      // setTimeout(() => $('[data-toggle="tooltip"]').tooltip(), 100);
       bigCartWrapper.setAttribute('data-toggle', 'tooltip');
       bigCartWrapper.setAttribute('data-placement', 'top');
-      bigCartWrapper.title = 'Drag to TrashCan to dispose';
+      bigCartWrapper.title = 'Drag to Trash Can to dispose';
     } else if (window.innerWidth <= 1024) {
-      
+
       bigCartWrapper.setAttribute('data-toggle', 'tooltip');
       bigCartWrapper.setAttribute('data-placement', 'top');
       bigCartWrapper.title = 'Swipe Left/Right to dispose';
-      
-      $('#trash').on('click',(e)=>{
+
+      $('#trash').on('click', (e) => {
         // setTimeout(() => $('[data-toggle="tooltip"]').tooltip(), 100);
 
-      //   document.getElementById('trash').setAttribute('data-toggle', 'tooltip');
-      // document.getElementById('trash').setAttribute('data-placement', 'top');
-      // document.getElementById('trash').title = 'Swipe Left/Right to dispose';
+        //   document.getElementById('trash').setAttribute('data-toggle', 'tooltip');
+        // document.getElementById('trash').setAttribute('data-placement', 'top');
+        // document.getElementById('trash').title = 'Swipe Left/Right to dispose';
 
 
         console.log(e.target);
       })
-      
+
     }
 
     if (e.target.id == 'add-to-cart') {
@@ -559,37 +549,37 @@ xhr.onprogress=()=>{
         start = Math.round(e.touches[0].pageX);
         tag.style.position = 'relative';
         timeb4 = Math.ceil(e.timeStamp);
-        
+
       });
       $(tag).on('touchmove', e => {
 
         move = Math.round(e.touches[0].pageX);
-        if( e.timeStamp-timeb4 > 200){
-        tag.style.left = move - start + 'px';
+        if (e.timeStamp - timeb4 > 200) {
+          tag.style.left = move - start + 'px';
 
         }
         console.log(Math.ceil(e.timeStamp) - timeb4);
-        console.log("move: ",move, "start: ",start, move-start, "timestart: ",timeb4, "timenow: ",e.timeStamp, e.timeStamp-timeb4);
-        if( e.timeStamp-timeb4 > 200){
-        if (move - start > 150  || move-start < -150) {
+        console.log("move: ", move, "start: ", start, move - start, "timestart: ", timeb4, "timenow: ", e.timeStamp, e.timeStamp - timeb4);
+        if (e.timeStamp - timeb4 > 200) {
+          if (move - start > 150 || move - start < -150) {
 
-          tag.remove();
-          tag.style.display = 'none';
+            tag.remove();
+            tag.style.display = 'none';
 
-          $('.tooltip').remove();
-          $("#alert").css("right","10%");
-         
-          if (document.getElementById('cart-inner-body').childElementCount < 2) {
+            $('.tooltip').remove();
+            $("#alert").css("right", "10%");
 
-            document.getElementById('total-panel').classList.replace('d-block', 'd-none');
-            $('#empty-text').show();
-            $('#checkout-amount').text('');
-          } else if (document.getElementById('cart-inner-body').childElementCount != 0) {
+            if (document.getElementById('cart-inner-body').childElementCount < 2) {
+
+              document.getElementById('total-panel').classList.replace('d-block', 'd-none');
+              $('#empty-text').show();
+              $('#checkout-amount').text('');
+            } else if (document.getElementById('cart-inner-body').childElementCount != 0) {
+              totalPriceCalc();
+            }
             totalPriceCalc();
           }
-          totalPriceCalc();
         }
-      }
         // console.log(tag);
       });
       $(tag).on('touchend', e => {
@@ -597,7 +587,7 @@ xhr.onprogress=()=>{
         start = 0;
         move = 0;
         timeb4 = 0;
-         setTimeout(()=>$("#alert").css("right","-60%"), 3000);
+        setTimeout(() => $("#alert").css("right", "-60%"), 3000);
 
       });
 
@@ -619,7 +609,7 @@ xhr.onprogress=()=>{
       // console.log(err)
     }
 
-    function plus () {
+    function plus() {
       if (e.target.id === 'plus') {
         amountEl.textContent = amount + parseInt(e.target.parentElement.children[1].id);
         amountEl.id = minAmount + 1;
@@ -668,8 +658,8 @@ xhr.onprogress=()=>{
 
       var total = $('#total-fee').text(),
         delivery = $('#delivery-fee').text(),
-      total = parseFloat(total.replace('₦', '')),
-      delivery = parseFloat(delivery.replace('₦', ''));
+        total = parseFloat(total.replace('₦', '')),
+        delivery = parseFloat(delivery.replace('₦', ''));
       $('#checkout-amount').text(`₦${total + delivery}`);
       $('#cartCheckout').prop('disabled', false);
     } catch (err) {
@@ -736,8 +726,8 @@ xhr.onprogress=()=>{
 
         submit.prop('disabled', false);
         callback();
-       int = setTimeout(()=>$(el).text(''),1500);
-       console.log('int: '+int);
+        int = setTimeout(() => $(el).text(''), 1500);
+        console.log('int: ' + int);
       } else {
         clearTimeout(int);
         submit.prop('disabled', true);
@@ -769,13 +759,13 @@ xhr.onprogress=()=>{
           if (number.val()[0] == '2' && number.val()[1] == '3' && number.val()[2] == '4' && number.val().length == 13) {
             number.val(`+${number.val()}`);
             alert(number.val());
-            
+
           }
           if (number.val()[0] !== '+' && number.val()[0] !== '2' && number.val()[1] !== '3' && number.val()[2] !== '4' && number.val().length == 14) {
 
             number.val('+23' + b);
             number.val(number.val().replace(`${number.val()[3]}`, '4'));
-            
+
             v = number.val();
           }
 
@@ -811,7 +801,7 @@ xhr.onprogress=()=>{
       $email.val(user.email);
       $number.val(user.number);
       $('#user').text(user.name);
-    } else {}
+    } else { }
     // Updating local storage with Form Inputs Ends
 
     // Info Panel variables
@@ -867,7 +857,7 @@ xhr.onprogress=()=>{
           $email.val(user.email);
           $number.val(user.number);
           $('#user').text(user.name);
-        } else {}
+        } else { }
       }, 1000);
     });
 

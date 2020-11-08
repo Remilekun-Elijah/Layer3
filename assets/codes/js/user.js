@@ -92,8 +92,9 @@ class Form {
         $('.img1').fadeTo(500, 1);
         //  remove the register form after fading allowing customers review card to make use of the ROW div(class)
         $('#regform').addClass('d-none');
+        fetch('../../../assets/templates/locations.html').then(res => res.text()).then(data => $('main').html(data))
         // Work Here 
-        transition(); // user.js:91 Uncaught ReferenceError: transition is not defined
+        // transition(); // user.js:91 Uncaught ReferenceError: transition is not defined
       })
     }, 2000);
     // remove register modal

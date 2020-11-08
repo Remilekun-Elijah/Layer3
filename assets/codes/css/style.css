@@ -367,3 +367,10 @@ form[name='prepaid'] {
     transform: scale(1);
   }
 }
+
+/* HEADER */
+header #appetizer {
+  width: 90%;
+  max-height: 500px;
+  
+}
