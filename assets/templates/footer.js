@@ -71,7 +71,7 @@ const footer = document.createElement('footer');
   </div>
 
   <footer class="shadow-lg bg-danger text-white my-auto align-items-center" style=" font-size: 17px; padding-top:5px; padding-bottom:0px; height:40px;">
-    <p class="text-white text-center mb-0 py-0">&copy; 2018 & 2019 All rights reserved </p>
+    <p class="text-white text-center mb-0 py-0">&copy; 2018 - 2020 All rights reserved </p>
   </footer>
   `;
 

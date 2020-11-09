@@ -1,4 +1,4 @@
-<div class="footer pb-2 px- home-location" style="border-radius: 0 !important; ">
+`<div class="footer pb-2 px- home-location" style="border-radius: 0 !important; ">
  <div class="row mx-aut">
   <div class="col-lg-3 col-xl-3 col-md-5 col-sm-5  card card-body shadow-lg mx-auto mt-lg-5">
    <div class="">
@@ -121,4 +121,4 @@
         class='btn btn-block btn-outline-danger'>Order</button></a>
       </div>
      </div>
-    </div>
+    </div>`
