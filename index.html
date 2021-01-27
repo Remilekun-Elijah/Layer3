@@ -7,10 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#dc3545">
     <!-- SEARCH CONSOLE -->
-    <meta name="description"
-        content="Let's help you locate the nearest restaurants, mama-put or grocery malls closest to you under two minutes">
-    <meta name="keywords"
-        content="layer3 food, Layer3 food, mama put, online restaurants, buy food online, jumia food, Jumia Food, uber eat, Uber Eat, Deliveroo, deliveroo, layer3 ng, Layer3 ng, Layer3 Ng, layer3 lmt, layer3 limited, layer3.com.ng, layer3.com">
+    <meta name="description" content="Let's help you locate the nearest restaurants, mama-put or grocery malls closest to you under two minutes">
+    <meta name="keywords" content="layer3 food, Layer3 food, mama put, online restaurants, buy food online, jumia food, Jumia Food, uber eat, Uber Eat, Deliveroo, deliveroo, layer3 ng, Layer3 ng, Layer3 Ng, layer3 lmt, layer3 limited, layer3.com.ng, layer3.com">
     <meta name="robots" content="index,follow">
     <meta name="google-site-verification" content="ioIn-4W8w_wj--A7eBfGMDGDE_y1r2gb1rSVwlahZq0" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -19,6 +17,7 @@
     <script src="/__/firebase/6.2.3/firebase-app.js"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
+
         function gtag() {
             dataLayer.push(arguments);
         }
@@ -26,7 +25,7 @@
         gtag('config', 'UA-142202272-1');
     </script>
     <script>
-        ! function (n, e) {
+        ! function(n, e) {
             var t, o, i, c = [],
                 f = {
                     passive: !0,
@@ -35,24 +34,29 @@
                 r = new Date,
                 a = "pointerup",
                 u = "pointercancel";
+
             function p(n, c) {
                 t || (t = c, o = n, i = new Date, w(e), s())
             }
+
             function s() {
-                o >= 0 && o < i - r && (c.forEach(function (n) {
+                o >= 0 && o < i - r && (c.forEach(function(n) {
                     n(o, t)
                 }), c = [])
             }
+
             function l(t) {
                 if (t.cancelable) {
                     var o = (t.timeStamp > 1e12 ? new Date : performance.now()) - t.timeStamp;
-                    "pointerdown" == t.type ? function (t, o) {
+                    "pointerdown" == t.type ? function(t, o) {
                         function i() {
                             p(t, o), r()
                         }
+
                         function c() {
                             r()
                         }
+
                         function r() {
                             e(a, i, f), e(u, c, f)
                         }
@@ -60,20 +64,20 @@
                     }(o, t) : p(o, t)
                 }
             }
+
             function w(n) {
-                ["click", "mousedown", "keydown", "touchstart", "pointerdown"].forEach(function (e) {
+                ["click", "mousedown", "keydown", "touchstart", "pointerdown"].forEach(function(e) {
                     n(e, l, f)
                 })
             }
-            w(n), self.perfMetrics = self.perfMetrics || {}, self.perfMetrics.onFirstInputDelay = function (n) {
+            w(n), self.perfMetrics = self.perfMetrics || {}, self.perfMetrics.onFirstInputDelay = function(n) {
                 c.push(n), s()
             }
         }(addEventListener, removeEventListener);
     </script>
     <!-- END SEARCH CONSOLE -->
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link type="text/css" rel="stylesheet" href='assets/codes/css/style.css'>
     <link href='assets/library/font-awesome-4.7.min.css' rel="stylesheet" type="text/css">
     <link href='assets/library/animate-3.7.min.css' rel="stylesheet" type="text/css">
@@ -101,9 +105,9 @@
     <!-- register service worker -->
     <script>
         if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function () {
+            window.addEventListener('load', function() {
                 navigator.serviceWorker.register('/service-worker.js')
-                    .then(function () {
+                    .then(function() {
                         console.log("Service Worker Registered, Cheers to PWA Fire!");
                     });
             });
@@ -117,7 +121,7 @@
         .mb-5 img {
             width: 400px;
         }
-
+        
         @media(max-width: 768px) {
             .col-12 .display-4 {
                 text-align: center;
@@ -157,12 +161,10 @@
                         <div class="card-header">
                             <ul class="nav nav-tabs card-header-tabs">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link active text-danger" style="color:#dc3545 !important"
-                                        id="info"> Your info</a>
+                                    <a href="#" class="nav-link active text-danger" style="color:#dc3545 !important" id="info"> Your info</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" id="orders" class="nav-link text-danger"
-                                        style="color:#dc3545 !important">Orders</a>
+                                    <a href="#" id="orders" class="nav-link text-danger" style="color:#dc3545 !important">Orders</a>
                                 </li>
                             </ul>
                         </div>
@@ -174,26 +176,20 @@
                                 <form>
                                     <!-- Name -->
                                     <div class="form-group">
-                                        <input type="text" placeholder="Name" id='updateName' autocomplete="name"
-                                            class="form-control form-control-lg" required>
+                                        <input type="text" placeholder="Name" id='updateName' autocomplete="name" class="form-control form-control-lg" required>
                                         <p id="NameMsg"></p>
                                     </div>
                                     <!-- Email -->
                                     <div class="form-group">
-                                        <input type="text" placeholder="Office/House Address" id='updateEmail'
-                                            autocomplete="email" class="form-control form-control-lg" required>
+                                        <input type="text" placeholder="Office/House Address" id='updateEmail' autocomplete="email" class="form-control form-control-lg" required>
                                         <p id="EmailMsg"></p>
                                     </div>
                                     <!-- Number -->
                                     <div class="form-group">
-                                        <input type="tel" placeholder="Phone Number"
-                                            class="form-control form-control-lg" id='updateNumber' autocomplete="tel"
-                                            required>
+                                        <input type="tel" placeholder="Phone Number" class="form-control form-control-lg" id='updateNumber' autocomplete="tel" required>
                                         <p id="NumberMsg"></p>
                                     </div>
-                                    <input type="submit" class="btn btn-block btn-outline-light form-control"
-                                        value="Update" id='updateSubmit' data-target="#" data-toggle="modal"
-                                        data-backdrop="static" disabled>
+                                    <input type="submit" class="btn btn-block btn-outline-light form-control" value="Update" id='updateSubmit' data-target="#" data-toggle="modal" data-backdrop="static" disabled>
                                 </form>
                             </div>
                             <!-- info Ends -->
@@ -226,18 +222,17 @@
                         <div class="col-12">
                             <h1 class="text-sm-30 text-sm-center title">
                                 <i class="fa fa-quote-left"></i>
-                                <b class="d-inline border-2 border-bottom border-danger ">An hour break</b> sure can't
-                                be enough in that massive queue
+                                <b class="d-inline border-2 border-bottom border-danger ">An hour break</b> sure can't be enough in that massive queue
                                 <i class="fa fa-quote-right"></i>
                             </h1>
                         </div>
                     </div>
                     <div class="row pt-5 align-items-center justify-content-around">
 
-                         <div class="col-lg-7 col-md-6 col-sm-12 text-center">
-                             <img src="assets/images/people/grilled-fish.png" alt="" srcset="" id='appetizer' class="">
-                         </div>
-                         <!--    
+                        <div class="col-lg-7 col-md-6 col-sm-12 text-center">
+                            <img src="assets/images/people/grilled-fish.png" alt="" srcset="" id='appetizer' class="">
+                        </div>
+                        <!--    
                             <div class="d-flex flex-row">
                                 <div class="p-4 align-self-start">
                                     <i class="fa fa-check-circle"></i>
@@ -263,11 +258,8 @@
                             </div>
                         </div> -->
                         <!-- end col -->
-                        <div class="card bg-white border-0 mx-sm-auto mx-md -auto"
-                            style="border-left:1px solid white !important; border-top-left-radius: 2px !important; "
-                            id="regform">
-                            <div class="card bg-danger text-center card-form col-sm-5"
-                                style="border-top-left-radius: 30px !important">
+                        <div class="card bg-white border-0 mx-sm-auto mx-md -auto" style="border-left:1px solid white !important; border-top-left-radius: 2px !important; " id="regform">
+                            <div class="card bg-danger text-center card-form col-sm-5" style="border-top-left-radius: 30px !important">
                                 <div class="card-body">
                                     <h3><i class="fa fa-user fa-2x"></i> </h3>
                                     <p> Please fill out the form to register</p>
@@ -276,11 +268,8 @@
                                         <div class="group mb-3">
                                             <div class="group-wrapper" id='signUpName' class="animated shake">
                                                 <i class="fa fa-user pre"></i>
-                                                <input name="name" type="text" placeholder="Name" autocomplete="name"
-                                                    class="f-control text-danger" required>
-                                                <div class="d-flex border-left border-danger ml-1 flex-column justify-center animated"
-                                                    style='justify-content: center; visibility: hidden;'> <span
-                                                        class="pr-2 pl-1 text-danger fa bold"></span>
+                                                <input name="name" type="text" placeholder="Name" autocomplete="name" class="f-control text-danger" required>
+                                                <div class="d-flex border-left border-danger ml-1 flex-column justify-center animated" style='justify-content: center; visibility: hidden;'> <span class="pr-2 pl-1 text-danger fa bold"></span>
                                                 </div>
                                             </div>
                                             <p id="NameMsg"></p>
@@ -289,11 +278,8 @@
                                         <div class="group mb-3">
                                             <div class="group-wrapper" id='signUpNumber'>
                                                 <i class="fa fa-phone pre"></i>
-                                                <input name="number" type="tel" placeholder="Phone Number"
-                                                    class="f-control" autocomplete="tel" require>
-                                                <div class="d-flex border-left border-danger ml-1 flex-column justify-centerbg-muted"
-                                                    style='justify-content: center;visibility: hidden;'> <span
-                                                        class="pr-2 pl-2 text-danger fa bold"></span>
+                                                <input name="number" type="tel" placeholder="Phone Number" class="f-control" autocomplete="tel" require>
+                                                <div class="d-flex border-left border-danger ml-1 flex-column justify-centerbg-muted" style='justify-content: center;visibility: hidden;'> <span class="pr-2 pl-2 text-danger fa bold"></span>
                                                 </div>
                                             </div>
                                         </div>
@@ -301,8 +287,7 @@
                                         <div class="group mb-3" id='select-wrapper'>
                                             <div class="group-wrapper">
                                                 <i class="fa fa-map-marker pre"></i>
-                                                <select name="street" required id="street" class="f-control"
-                                                    style="margin-right:5px">
+                                                <select name="street" required id="street" class="f-control" style="margin-right:5px">
                                                     <option disabled selected>Select your street</option>
                                                     <option name="street" value="Jide Oki">Jide Oki</option>
                                                     <option name="street" value="Moshood Olugbani">Moshood Olugbani
@@ -317,18 +302,12 @@
                                         <div class="group mb-3">
                                             <div class="group-wrapper" id='signUpEmail'>
                                                 <i class="fa fa-address-book pre"></i>
-                                                <input type="text" placeholder="Office/House Address" class=" f-control"
-                                                    name="office" required>
-                                                <div class="d-flex border-left border-danger ml-1 flex-column justify-center"
-                                                    style='justify-content: center; visibility: hidden;'> <span
-                                                        class="pr-2 pl-1 text-danger fa bold"></span>
+                                                <input type="text" placeholder="Office/House Address" class=" f-control" name="office" required>
+                                                <div class="d-flex border-left border-danger ml-1 flex-column justify-center" style='justify-content: center; visibility: hidden;'> <span class="pr-2 pl-1 text-danger fa bold"></span>
                                                 </div>
                                             </div>
                                         </div>
-                                        <button name="submit" type="submit"
-                                            class="btn btn-outline-light btn-block form-control" value=""
-                                            id='signUpSubmi' data-toggle="modal" data-backdrop="static"
-                                            disabled>Submit</button>
+                                        <button name="submit" type="submit" class="btn btn-outline-light btn-block form-control" value="" id='signUpSubmi' data-toggle="modal" data-backdrop="static" disabled>Submit</button>
                                     </form>
                                 </div>
                             </div>
@@ -341,45 +320,37 @@
                                     <img src="assets/images/people/McD.jpg" alt="" class="img-fluid rounded-circle">
                                     <i class="fa fa-caret-down text-secondary fa-2x d-block"></i>
                                     <p class="lead">
-                                        <i class="fa fa-quote-left"></i> I've tried many other website but this
-                                        particular one is outstanding so i'd defintely recommend it to anyone out there
-                                        with 5-star assurance.
+                                        <i class="fa fa-quote-left"></i> I've tried many other website but this particular one is outstanding so i'd defintely recommend it to anyone out there with 5-star assurance.
                                         <i class="fa fa-quote-right"></i>
                                     </p>
                                 </div>
                                 <!-- img1 Ends -->
                                 <!-- img2 -->
                                 <div class="container-fluid text-center d-none img2" style="opacity:0">
-                                    <img src="assets/images/people/Mr Frank L3 20190128_024740.jpg" alt=""
-                                        class="img-fluid rounded-circle">
+                                    <img src="assets/images/people/Mr Frank L3 20190128_024740.jpg" alt="" class="img-fluid rounded-circle">
                                     <i class="fa fa-caret-down text-secondary fa-2x d-block"></i>
                                     <p class="lead">
-                                        <i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet consectetur
-                                        adipisicing elit. Perferendis, soluta?
+                                        <i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, soluta?
                                         <i class="fa fa-quote-right"></i>
                                     </p>
                                 </div>
                                 <!-- img2 Ends -->
                                 <!-- img3 -->
                                 <div class="container-fluid text-center d-none img3" style="opacity:0">
-                                    <img src="assets/images/people/Mr Chinedu L3 20190128_024853.jpg" alt=""
-                                        class="img-fluid rounded-circle">
+                                    <img src="assets/images/people/Mr Chinedu L3 20190128_024853.jpg" alt="" class="img-fluid rounded-circle">
                                     <i class="fa fa-caret-down text-secondary fa-2x d-block"></i>
                                     <p class="lead">
-                                        <i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet consectetur
-                                        adipisicing elit. Perferendis, soluta?
+                                        <i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, soluta?
                                         <i class="fa fa-quote-right"></i>
                                     </p>
                                 </div>
                                 <!-- img3 Ends -->
                                 <!-- img4 -->
                                 <div class="container-fluid text-center d-none img4" style="opacity:0">
-                                    <img src="assets/images/people/Mr Edwin Whatsapp 20190128_024954.jpg" alt=""
-                                        class="img-fluid rounded-circle">
+                                    <img src="assets/images/people/Mr Edwin Whatsapp 20190128_024954.jpg" alt="" class="img-fluid rounded-circle">
                                     <i class="fa fa-caret-down text-secondary fa-2x d-block"></i>
                                     <p class="lead">
-                                        <i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet consectetur
-                                        adipisicing elit. Perferendis, soluta?
+                                        <i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, soluta?
                                         <i class="fa fa-quote-right"></i>
                                     </p>
                                 </div>
@@ -461,23 +432,19 @@
                     <div class=" col-lg-3 col-md- mx col-sm-6 mb-5 text-center">
                         <div class="round">1</div>
                         <p class="text-secondary mt-2">
-                            We know you want good, affordable and delicious food so we've got all parked up for you just
-                            how you want it.
+                            We know you want good, affordable and delicious food so we've got all parked up for you just how you want it.
                         </p>
                     </div>
                     <div class=" col-lg-3 col-md- mx col-sm-6 mb-5 text-center">
                         <div class="round">2</div>
                         <p class="text-secondary mt-2">
-                            Speed and efficient delivery is also one of the key part of our service. No need to check
-                            the time, we are at your doorstep already.
+                            Speed and efficient delivery is also one of the key part of our service. No need to check the time, we are at your doorstep already.
                         </p>
                     </div>
                     <div class="col-lg-3 col-md- mx col-sm-6 mb-5 text-center">
                         <div class="round">3</div>
                         <p class="text-secondary mt-2">
-                            Right to choice. Wether small restaurant meals or classic mothern restaurant meals, we have
-                            them all at your reach. <strong class='text-primary'>Sign up</strong> and start ordering
-                            now!
+                            Right to choice. Wether small restaurant meals or classic mothern restaurant meals, we have them all at your reach. <strong class='text-primary'>Sign up</strong> and start ordering now!
                         </p>
                     </div>
                 </div>
@@ -503,8 +470,7 @@
                             <div>
                                 <i class="fa fa-quote-left text-danger"></i>
                                 <p class="d-inline text-secondary"> <a href='location/law-school.html' class="">Law
-                                        School</a> really have good food, and they have lots of
-                                    varieties to select from. Their food is amazing.</p>
+                                        School</a> really have good food, and they have lots of varieties to select from. Their food is amazing.</p>
                                 <i class="fa fa-quote-right text-danger"></i>
                             </div>
                         </div>
@@ -521,8 +487,7 @@
                             </div>
                             <hr class="w-75 mx-auto ">
                             <div> <i class="fa fa-quote-left text-danger"></i>
-                                <p class="d-inline text-secondary">I've tasted almost every locations food on this site,
-                                    they're all nice i must confess. It really worth a try.
+                                <p class="d-inline text-secondary">I've tasted almost every locations food on this site, they're all nice i must confess. It really worth a try.
                                 </p>
                                 <i class="fa fa-quote-right text-danger"></i>
                             </div>
@@ -541,9 +506,7 @@
                             <hr class="w-75 mx-auto ">
                             <div>
                                 <i class="fa fa-quote-left text-danger"></i>
-                                <p class="d-inline text-secondary"> Lorem ipsum dolor sit amet consectetur adipisicing
-                                    elit.
-                                    Tempore cumque quia aut incidunt?</p>
+                                <p class="d-inline text-secondary"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore cumque quia aut incidunt?</p>
                                 <i class="fa fa-quote-right text-danger    "></i>
                             </div>
                         </div>
@@ -557,7 +520,7 @@
     </main>
     <div id="screen"><span class="closeRegModalBtn dismissCloseRegModalBtn">&times;</span>
     </div>
-    
+
     <script src="assets/templates/navbar.js"></script>
     <script src="assets/templates/footer.js"></script>
     <script src="assets/codes/js/user.js"></script>
@@ -577,7 +540,7 @@
     </script>
     <script>
         // The perfMetrics object is created by the code that goes in <head>.
-        perfMetrics.onFirstInputDelay(function (delay, evt) {
+        perfMetrics.onFirstInputDelay(function(delay, evt) {
             ga('send', 'event', {
                 eventCategory: 'Perf Metrics',
                 eventAction: 'first-input-delay',
