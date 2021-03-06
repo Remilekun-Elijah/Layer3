@@ -8,7 +8,7 @@ function nav(home, location) {
 
     } else {
         location = 'location/';
-        home = 'index.html'
+        home = 'index'
     };
     navs.innerHTML = `<nav class="navbar navbar-expand-sm bg-danger shadow-lg stickey-top">
                 <div class="container">
@@ -21,13 +21,13 @@ function nav(home, location) {
                     <div class="collapse navbar-collapse" id="navbar">
                         <ul class="nav navbar-nav ml-auto">
                             <li class="nav-item">
-                                <a href="${location}moshood.html" class="nav-link">Moshood</a>
+                                <a href="${location}moshood" class="nav-link">Moshood</a>
                             </li>
                             <li class="nav-item">
-                                <a href="${location}landmark.html" class="nav-link">Landmark</a>
+                                <a href="${location}landmark" class="nav-link">Landmark</a>
                             </li>
                             <li class="nav-item">
-                                <a href="${location}jide-oki.html" class="nav-link">Jide Oki</a>
+                                <a href="${location}jide-oki" class="nav-link">Jide Oki</a>
                             </li>
     
                             <li class="nav-item dropdown ml-md-5 ">

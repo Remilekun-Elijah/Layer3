@@ -1,0 +1,26 @@
+{
+    "name": "layer3",
+    "version": "1.0.0",
+    "description": "a food ordering website",
+    "main": "index",
+    "scripts": {
+        "dev": "nodemon index"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Remilekun-Elijah/Layer3.git"
+    },
+    "author": "Remilekun Elijah",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Remilekun-Elijah/Layer3/issues"
+    },
+    "homepage": "https://github.com/Remilekun-Elijah/Layer3#readme",
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "express": "^4.17.1"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.7"
+    }
+}

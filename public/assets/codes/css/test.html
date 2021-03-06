@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            text-align: center;
+        }
+        
+        .slider {
+            margin: 0 auto;
+            width: 600px;
+            height: 500px;
+            background: #333;
+            position: relative;
+        }
+        
+        .slides {
+            position: relative;
+            width: 300px;
+            height: 500px;
+            display: flex;
+            margin: 0 auto;
+            overflow-x: hidden;
+        }
+        
+        .slides img {
+            margin-top: 50px;
+            width: 300px;
+            height: 400px;
+        }
+        
+        .slide {
+            /* opacity: 0; */
+        }
+        
+        .arrows .left {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            left: 5;
+            top: 50%;
+            background: rgb(246 245 245 / 1);
+            margin-left: 15px;
+            transition: all .3s;
+        }
+        
+        .arrows .left>span {
+            position: absolute;
+            /* top: 0px; */
+            width: 25px;
+            height: 25px;
+            border-left: 2px solid #333;
+            border-top: 2px solid #333;
+            transform: rotate(-40deg);
+            margin-top: 7px;
+            margin-left: -5px;
+            transition: all .3s;
+        }
+        
+        .arrows .right {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            right: 0;
+            top: 50%;
+            background: rgb(246 245 245 / 1);
+            margin-right: 15px;
+            transition: all .3s;
+        }
+        
+        .arrows .right:hover,
+        .arrows .left:hover {
+            background-color: #000;
+            border-radius: 5px;
+        }
+        
+        .arrows .right>span {
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            border-right: 2px solid #333;
+            border-top: 2px solid #333;
+            transform: rotate(40deg);
+            margin-top: 7px;
+            margin-left: -19px;
+            transition: all .3s;
+        }
+        
+        .arrows .left>span:hover,
+        .arrows .right>span:hover {
+            border-color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Carousel test</h1>
+    <div class="slider">
+        <div class="arrows">
+            <div class="left"><span></span></div>
+            <div class="right"><span></span></div>
+        </div>
+        <div class="slides">
+            <div class="slide" id="first">
+                <img src="../../images/people/author.jpg" alt="" srcset="">
+            </div>
+            <div class="slide" id="second">
+                <img src="../../images/people/frank.jpg" alt="" srcset="">
+            </div>
+            <div class="slide" id="third">
+                <img src="../../images/people/McD.jpg" alt="" srcset="">
+            </div>
+        </div>
+    </div>
+    <script>
+        // let img = document.getElementsByClassName('slide');
+        // index = img.length;
+
+
+
+        let index = 0;
+        const slides = document.getElementsByClassName('slide');
+
+        function active() {
+            index++;
+            if (index > slides.length) index = 1;
+
+
+            // console.log(index);
+            return index - 1;
+        }
+        let ar = Array.from(slides);
+        let pr = [];
+        // console.log(ar)
+
+        function showSlide() {
+            // if (pr.length != 0) {
+            //     pr[0].style.display = 'none';
+            //     ar.push(pr[0]);
+            // } else {}
+            // ar.push(slides[active()]);
+            // ar[0].style.dsplay = 'none';
+            console.log(ar[active()])
+
+            // console.log(ar.length)   
+            pr.push(ar[active()])
+            console.log('PR: ', pr)
+            console.log('AR: ', ar)
+
+        }
+
+        // let h = slide(index)
+        setInterval(showSlide, 1000);
+
+
+
+
+        document.querySelector('.left>span').addEventListener('click', e => {
+            index - 1;
+
+            if (index < 1) {
+                index = img.length;
+                console.log(img[index])
+            } else {
+                index--;
+                console.log(img[index])
+            };
+
+            img[index].style.marginLeft = '-300' + 'px'
+        })
+    </script>
+    <script src="../../library/jquery-3.3.1.min.js "></script>
+</body>
+
+</html>

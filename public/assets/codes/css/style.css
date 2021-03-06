@@ -1,0 +1,390 @@
+    @import url('https://fonts.googleapis.com/css?family=Old+Standard+TT');
+    @import url('https://fonts.googleapis.com/css?family=Anton');
+    body {
+        overflow-x: hidden;
+    }
+    
+    .bold {
+        font-weight: bolder !important;
+    }
+    
+    #food-desc,
+    #prepaid p,
+    .white-text,
+    .bottom {
+        margin-top: 10px;
+        font-family: 'Old Standard TT', serif;
+        font-size: 18px;
+        color: hsl(3, 3%, 35%);
+    }
+    
+    .title {
+        font-family: Anton, 'Old Standard TT', serif;
+    }
+    
+    .nav .nav-link {
+        color: white !important
+    }
+    
+    .navbar-brand,
+    .time {
+        font-family: 'Anton', sans-serif;
+    }
+    
+    .ampm,
+    p,
+    div,
+    input[placeholder],
+    select option,
+    select[selected] {
+        font-family: 'Old Standard TT', serif;
+    }
+    
+    .navbar {
+        opacity: 0.97;
+        border-bottom: 3px solid #dc3545 !important;
+    }
+    
+    #home {
+        width: 100%;
+        min-height: 500px;
+        max-height: 1500px;
+        background: url(../../images/Owerri-mall-store.jpg) no-repeat center;
+        background-attachment: fixed;
+        background-size: cover;
+        /* margin-bottom: -30px; */
+    }
+    
+    .modal {
+        overflow-y: scroll !important;
+    }
+    
+    .dropdown-menu {
+        margin-right: 100px !important
+    }
+    
+    .dark-overlay {
+        width: 100%;
+        min-height: 500px;
+        max-height: 1500px;
+        background-attachment: fixed;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.7) !important;
+        margin-bottom: -25px;
+    }
+    
+    #home-inner {
+        padding-top: 50px;
+    }
+    
+    .white-text,
+    #prepaid textarea {
+        color: #fff !important;
+    }
+    
+    .dropdown-item:last-child:hover {
+        background: #dc3545 !important;
+        color: white
+    }
+    
+    .mail:hover {
+        text-decoration: none;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    .description {
+        padding: 5px 10px;
+        font-size: 1rem !important;
+    }
+    
+    .card {
+        border-radius: 0px !important;
+        transition: all .3s ease-in-out;
+    }
+    
+    .card:hover {
+        transition: all .3s ease-in-out;
+        /* transform: translate3D(0px, -5px, 1px); */
+    }
+    
+    .btn-outline-secondary {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .custom-hr {
+        border-top: 2px double #dc3545;
+    }
+    
+    .footer {
+        clear: both !important;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    /* .sticky-top {
+  top: 3.8em !important;
+  width: 30%; 
+} */
+    
+    .container-fluid {
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+    }
+    
+    .lawschool-header {
+        background: #fff;
+        color: #fff;
+        width: 100% !important;
+    }
+    
+    body {
+        background: #f4f4f4 !important;
+    }
+    /* mobile cart height */
+    
+    .collapseHeight {
+        height: 100%
+    }
+    
+    #cart-body {
+        overflow-x: hidden !important;
+        margin-bottom: 0 !important;
+    }
+    
+    #cart-wrapper:hover {
+        cursor: -webkit-grab;
+    }
+    
+    .shake {
+        animation-iteration-count: infinite;
+    }
+    
+    p {
+        font: thin 14px sans-serif;
+    }
+    
+    #unregister:hover {
+        color: white !important;
+    }
+    
+    .social {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        border-left: 4px solid #dc3545;
+        border-right: 4px solid #dc3545;
+    }
+    /* CHECKOUT */
+    
+    form[name='prepaid'] {
+        display: -webkit-box;
+        -webkit-box-pack: center;
+        background: #eee;
+    }
+    
+    #checkoutModal {
+        padding: 0 !important;
+    }
+    
+    .bigCartWrapper {
+        transition: all 300ms
+    }
+    
+    .text-hidden {
+        visibility: hidden;
+    }
+    
+    #alert {
+        position: fixed;
+        right: -100%;
+        bottom: 100px;
+        z-index: 9999;
+        transition: all .3s;
+    }
+    
+    #remove-alert:hover {
+        color: #dc3545;
+        cursor: pointer
+    }
+    
+    #select-wrapper {
+        width: 100%;
+    }
+    
+    .group {
+        width: 100%;
+        height: 40px;
+    }
+    
+    .group-wrapper {
+        border-radius: 30px;
+        border: 1px solid transparent;
+        background: #eee;
+        display: flex;
+    }
+    
+    .pre {
+        margin: 5px;
+        padding: 5px;
+        font-size: 20px !important;
+        color: #dc3545;
+    }
+    
+    .f-control {
+        border: 0px solid transparent;
+        outline: none;
+        background-color: #eee;
+        color: #a81625;
+        text-align: left;
+        font-size: 17px;
+        font-weight: 500;
+        font-family: serif;
+        border-radius: 30px;
+        width: 100%;
+    }
+    /* .group-wrapper::after {
+  content: '';
+  background: #333 !important
+} */
+    
+    .hideScroll {
+        overflow-y: hidden !important;
+    }
+    
+    .showScroll {
+        overflow-y: scroll !important;
+    }
+    
+    #screen {
+        transform: translate(-100%, 0%);
+        position: absolute;
+        background: rgba(0, 0, 0, .9);
+        width: 100%;
+        height: 10000px;
+        top: 0;
+        left: 0;
+        opacity: 1;
+        overflow: hidden !important;
+    }
+    
+    .screen {
+        z-index: 2;
+        transform: translate(0%, 0%) !important;
+        transition: transform .3s;
+    }
+    
+    .closeScreen {
+        transform: translate(-100%, 0%) !important;
+        transition: all .3s;
+    }
+    
+    #regform,
+    #regform .card-form {
+        /* min-width: 250px; */
+        max-height: 430px;
+        max-width: 500px;
+        /* transition: all .5s; */
+    }
+    
+    .regform {
+        z-index: 999;
+        background: #f4f4f4;
+        transition: all .3s;
+    }
+    
+    #cart-amount-wrapper {
+        width: 105px !important;
+    }
+    /* 
+.closeRegForm {
+  transform: translate(0vw,0vh) !important;
+  z-index: 0;
+  transition: all .5s;
+} */
+    
+    .closeRegModalBtn {
+        position: absolute;
+        right: 5vw;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 600;
+        padding: 0px 8px;
+        background: white;
+        color: #dc3545;
+        box-shadow: 1px 2px 1px #333;
+        border-radius: 100%;
+        /* transform: scale(0); */
+        transition: transform .3s;
+    }
+    
+    .scaleCloseRegModalbtn {
+        z-index: 2;
+        animation-name: trans;
+        animation-duration: .3s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+    
+    .dismissCloseRegModalBtn {
+        transform: scale(0);
+        transition: transform .3s;
+    }
+    
+    .scaleCloseRegModalbtn:hover {
+        cursor: pointer;
+    }
+    
+    @keyframes trans {
+        0% {
+            transform: scale(0);
+        }
+        50% {
+            transform: scale(1.3);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+    
+    @-webkit-keyframes trans {
+        0% {
+            transform: scale(0);
+        }
+        50% {
+            transform: scale(1.3);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+    /* HEADER */
+    
+    header #appetizer {
+        width: 90%;
+        max-height: 500px;
+    }
+    /** Landing page Customers feedback area**/
+    
+    #customers-feedback {
+        /* border: 1px solid red !important; */
+        /* overflow-x: scroll; */
+        /* height: 500px */
+        width: 1000px
+    }
+    
+    #customers-feedback .img {
+        display: flex;
+        flex-direction: row !important;
+        width: 500px;
+        /* overflow-x: scroll; */
+    }
+    
+    #customers-feedback .slide {
+        width: 500px !important;
+        /* max-width: 100%; */
+        /* display: inline-block; */
+    }
