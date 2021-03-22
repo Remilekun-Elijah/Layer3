@@ -101,12 +101,12 @@ class Form {
             $('.show').remove();
             // make scroll available after removing modal overlay
             $('body').removeClass('modal-open');
-        }, 4000)
+        }, 4000);
     }
 
 }
 const signup = new Form('#signUp');
-signup.verify().submit()
+signup.verify().submit();
 
 alert('000000');
 document.addEventListener('DOMContentLoaded', function() {

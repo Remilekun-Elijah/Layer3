@@ -12,18 +12,21 @@ const footer = document.createElement('footer');
       <div class="row bottom">
         <div class="col-sm-6 mb-3">
           <h3 class="text-white">
-            <i class="fa fa-map-marker"></i> Locations
+            <i class="fa fa-link"></i> Quick Links
           </h3>
           <hr style="width:170px; " class="pb-3">
           <div class="">
             <p class="pl-3">
-              <a class='white-text' href="${location}law-school.html">Law School</a>
+              <a class='white-text' href="${location}moshood">Moshood</a>
             </p>
             <p class="pl-3">
-              <a class="white-text" href="${location}landmark.html">Landmark</a>
+              <a class="white-text" href="${location}landmark">Landmark</a>
             </p>
             <p class=" pl-3">
-              <a class="white-text" href="${location}jide-oki.html">Jide Oki</a>
+              <a class="white-text" href="${location}jide-oki">Jide Oki</a>
+            </p>
+            <p class=" pl-3">
+              <a class="white-text" href="${location}law-school">Law School</a>
             </p>
           </div>
         </div>
@@ -43,7 +46,7 @@ const footer = document.createElement('footer');
             </p>
 
             <p class="phone white-text">
-              <i class="fa fa-phone col-lg-offset-2"></i> +234903251166
+              <i class="fa fa-phone col-lg-offset-2"></i> +2348119690228
             </p>
           </div>
         </div>
